@@ -1,0 +1,471 @@
+@use "_global" as *;
+@use "_mixin" as *;
+
+#buttonProjects {
+  background-image: url("img/possessed-photography-jIBMSMs4_kA-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .bgFilter {
+    background-color: var(--bgFilterBlk);
+    z-index: 1;
+  }
+}
+
+#buttonProject {
+  display: none;
+}
+#buttonProject.showProject {
+  display: block;
+}
+
+#toggleButton {
+  display: none;
+}
+#toggleButton.showProject {
+  display: block;
+}
+
+.toggleButton {
+  .toggleSummary{
+    padding: .5em;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--toggleTheme);
+    border-radius: 1em;
+  }
+  .toggleBtns{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .toggle-container {
+    width: 200px;
+    margin: auto;
+    h4 {
+      font-size: 18px;
+      color: var(--toggleTheme);
+      padding: 0.5rem;
+      text-align: center;
+      text-shadow: 0px 0px 2px var(--black)
+    }
+    .btn-container {
+      @include shadowSm-inset;
+      content: "";
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      width: 200px;
+      height: 100px;
+      margin: auto;
+      background-color: var(--toggleTheme);
+      border-radius: 100px;
+      margin-bottom: 25px;
+      .toggle {
+        @include shadowSm;
+        cursor: pointer;
+        margin-left: 10px;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
+#defaultIcon{
+  color: var(--defaultThemeClr);
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Audiowide';
+  letter-spacing: 1px;
+}
+#htmlIcon{
+  color: var(--htmlThemeClr);
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Audiowide';
+  text-shadow: 0px 0px 2px var(--black);
+  letter-spacing: 2px;
+}
+#cssIcon{
+  color: var(--cssThemeClr);
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Audiowide';
+  text-shadow: 0px 0px 2px var(--black);
+  letter-spacing: 2px;
+}
+#sassIcon{
+  color: var(--sassThemeClr);
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Audiowide';
+  text-shadow: 0px 0px 2px var(--black);
+  letter-spacing: 2px;
+}
+#jsIcon{
+  color: var(--jsThemeClr);
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Audiowide';
+  text-shadow: 0px 0px 2px var(--black);
+  letter-spacing: 2px;
+}
+#toggleInputs {
+  display: none;
+}
+#toggleInputs.showProject {
+  display: block;
+}
+
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#inputToggleTheme{
+  background-color: var(--inputToggleTheme);
+}
+#toggleInputHeader{
+color: var(--inputToggleTxt);
+}
+  .toggleInput-container {
+    background-color: var(--bg-panel);
+  margin: auto;
+  //padding: 5em;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  h4 {
+    width: 100%;
+    font-size: 18px;
+      text-align: center;
+      padding: 0.5rem;
+      color: var(--black);
+    }
+  }
+
+
+// This code for the checkbox is from Codepen by Marcus Burnette
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 200px;
+  height: 100px;
+  margin-bottom: 2em;
+  background: var(--inputToggleTheme);
+  display: block;
+  border-radius: 100px;
+}
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+  background-image: url("img/icon/936949-200.png");
+      background-size: contain;
+      background-position: center;
+}
+
+input:checked + label {
+  background: var(--inputToggleTheme);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+  background-image: url("img/icon/sun_light_mode_day-2-512.webp");
+      background-size: contain;
+      background-position: center;
+}
+
+label:active:after {
+  width: 130px;
+}
+
+.toggleIcon{
+  border-radius: 50%;
+}
+  // Toggle Animations
+  .toggle.toggleAnim {
+    animation: tglAnimFwd 400ms linear both;
+  }
+  .toggle.toggleAnimRev {
+    animation: tglAnimRev 400ms linear both;
+  }
+  @keyframes tglAnimFwd {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(95px);
+    }
+  }
+  @keyframes tglAnimRev {
+    0% {
+      transform: translateX(95px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+
+#burgerSection {
+  display: none;
+}
+#burgerSection.showProject {
+  display: block;
+}
+
+.burgerMenu {
+  .projectBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    .card-container {
+      @include shadowSm-inset;
+      border-radius: 1rem;
+      .menuCard {
+        padding: 2rem;
+        height: 250px;
+        h1 {
+          @include darkMode;
+          height: 100px;
+          font-size: calc(0.75vw + 1rem);
+          text-align: center;
+          padding: 1rem;
+          margin-bottom: 3rem;
+          color: var(--themeTxtClr);
+          text-shadow: 0px 0px 2px var(--black);
+          background-image: url("img/background_2.png");
+          background-size: cover;
+          border-radius: 1rem;
+        }
+        .btn {
+          cursor: pointer;
+          width: 80px;
+          margin: auto;
+          .line {
+            background-color: var(--darkModeTxtClr);
+            width: 80px;
+            height: 6px;
+            border-radius: 1rem;
+          }
+          .lineTop {
+            transform: translateY(-5px);
+          }
+          .lineCenter {
+            background-color: var(--themeBdr);
+          }
+          .lineBottom {
+            transform: translateY(5px);
+          }
+        }
+        #menu2-btn .lineTop {
+          transform: translateY(-5px);
+        }
+        #menu2-btn .lineCenter {
+          background-color: orange;
+        }
+        #menu2-btn .lineBottom {
+          transform: translateY(5px);
+        }
+        #menu3-btn .lineTop {
+          transform: translateY(-5px);
+        }
+        #menu3-btn .lineBottom {
+          transform: translateY(5px);
+        }
+        .menuClicked .lineTop {
+          height: 6px;
+          transform: translateY(8.5px) rotate(45deg);
+        }
+        .menuClicked .lineBottom {
+          height: 6px;
+          transform: translateY(-8.5) rotate(-45deg);
+        }
+        .menuClicked .lineCenter {
+          opacity: 0;
+        }
+        .menuClicked.header3 {
+          background-color: var(--themeBdr);
+          transition: all 300ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+
+// One Button Click Events
+#btn {
+  display: none;
+}
+#btn.showProject {
+  display: block;
+}
+.btn {
+  .oneBtn {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background-color: #e9e9e9;
+    margin-bottom: 250px;
+    .motto {
+      @include darkMode;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      text-align: center;
+      p {
+        padding: 3.25rem 1rem 1rem 1rem;
+        letter-spacing: 0.1rem;
+        font-size: 14px;
+        span {
+          color: green;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+      div {
+        font-size: 14px;
+        color: red;
+        font-weight: 600;
+        span {
+          color: green;
+        }
+        span:last-child {
+          color: orange;
+        }
+      }
+    }
+  }
+  .btnReg {
+    h2 {
+      font-size: calc(1vw + 1.25rem);
+      text-align: center;
+      margin: 25px 0px;
+    }
+    .btnDiv {
+      @include shadowLg;
+      background-color: #e3e3e3;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 75px;
+      .messageBox {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+        margin-bottom: 20px;
+        .activeButton {
+          display: none;
+          @include shadowLg;
+          border-radius: 0.75rem;
+          h4 {
+            width: 100%;
+            text-align: center;
+            padding: 0.25rem;
+          }
+          ul {
+            list-style: none;
+            padding-bottom: 0.25rem;
+            li {
+              text-align: center;
+              font-family: "montserrat";
+              font-size: calc(0.5vw + 0.4rem);
+            }
+          }
+        }
+      }
+      .btn-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
+        .btn-box {
+          margin: auto;
+          width: 100px;
+          .btn {
+            @include shadowSm;
+            min-width: 100px;
+            cursor: pointer;
+            height: 30px;
+            background-color: rgb(230, 230, 230);
+            letter-spacing: 0.1rem;
+            border: none;
+            outline: none;
+          }
+          .btn:hover {
+            @include shadowLg;
+          }
+          .active {
+            @include shadowLg-inset;
+            border: none;
+          }
+        }
+        .btn-rndCorner {
+          border-radius: 1rem;
+        }
+
+        .btn-caution {
+          color: yellow;
+        }
+        .btn-danger {
+          color: orangered;
+        }
+        .btn-active {
+          opacity: 0.7;
+        }
+      }
+      // Round Button Override Style
+      .btn-cont.Rnd-btn {
+        text-align: center;
+        .btn-smRnd {
+          min-width: 25px;
+          height: 25px;
+          border-radius: 50%;
+        }
+        .btn-lgRnd {
+          min-width: 75px;
+          height: 75px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 310px) {
+}
+@media screen and (min-width: 400px) {
+}
+@media screen and (min-width: 481px) {
+}
+@media screen and (min-width: 715px) {
+#buttonProjects{
+}
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1200px) {
+}

@@ -1,0 +1,71 @@
+@use "_global" as *;
+@use "_mixin" as *;
+
+.featureHeader {
+    @include darkMode;
+    text-align: center;
+    margin: auto;
+    margin-top: 2em;
+    padding: 1.5em 1em;
+    width: 80%;
+    max-width: 650px;
+    border-radius: 1rem;
+    background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
+    //border: 2px solid var(--jsThemeClr);
+    //background-image: url("img/backgrounds/header_background_2.png");
+    background-size: cover;
+    background-color: var(--themeBlk);
+    margin-bottom: 50px;
+    p {
+      font-family: "Bedrock";
+      color: var(--white);
+      font-size: 1em;
+      font-weight: 600;
+      letter-spacing: 3px;
+      padding: .25em;
+      text-shadow: 0px 0px 3px var(--black);
+    }
+    h2 {
+      font-family: "audiowide", cursive;
+      text-shadow: 0px 0px 5px var(--black);
+      font-size: 1.25em;
+      font-weight: 900;
+      color: var(--secondaryTxt);
+      letter-spacing: 4px;
+    }
+  }
+.welcome {
+    p {
+      padding: 1em;
+      line-height: 1.4;
+      font-size: 0.8em;
+      letter-spacing: 1px;
+      span {
+        font-size: 1.5em;
+        color: #c0fff4;
+        font-family: "Audiowide";
+        text-shadow: 0px 0px 3px var(--black);
+        font-weight: 900;
+        letter-spacing: 2px;
+      }
+    }
+    &__header {
+      color: var(--darkModeTxtClr);
+      margin: auto;
+      width: 95%;
+      max-width: 800px;
+    }
+  }
+  
+@media (min-width: 310px) {
+}
+@media (min-width: 400px) {
+}
+@media (min-width: 481px) {
+}
+@media (min-width: 769px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
+}
