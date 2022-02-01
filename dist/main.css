@@ -1134,7 +1134,7 @@ footer span {
   }
 }
 #imgProjects {
-  background-image: url("img/sajad-nori-unsplash_img9.jpg");
+  background-image: url("img/backgrounds/images-1500.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1576,7 +1576,7 @@ footer span {
 }
 
 #animationProjects {
-  background-image: url("img/possessed-photography-YKW0JjP7rlU-unsplash.jpg");
+  background-image: url("img/backgrounds/animation-1500.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2430,7 +2430,7 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
 }
 
 #buttonProjects {
-  background-image: url("img/possessed-photography-jIBMSMs4_kA-unsplash.jpg");
+  background-image: url("img/backgrounds/hand-1500.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2904,7 +2904,7 @@ label:active:after {
 }
 
 #localStorageProjects {
-  background-image: url("img/imgix-klWUhr-wPJ8-unsplash.jpg");
+  background-image: url("img/backgrounds/storage-1500.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

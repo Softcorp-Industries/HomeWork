@@ -1,7 +1,7 @@
 @use "_global" as *;
 @use "_mixin" as *;
 #imgProjects {
-  background-image: url("img/sajad-nori-unsplash_img9.jpg");
+  background-image: url("img/backgrounds/images-1500.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -325,8 +325,6 @@ padding-top: 80px;
     border-radius: 0.5rem;
   }
 }
-
-
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -336,7 +334,6 @@ padding-top: 80px;
   opacity: 0;
   animation: fadeIn 0.5s ease-in 1 forwards;
 }
-
 #imgProductGallery{
   display: none;
 }
