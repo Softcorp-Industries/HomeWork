@@ -96,7 +96,7 @@ const disableDefaultToggle = () => {
 
 const enableHtmlToggle = () => {
   document.body.setAttribute("data-toggleMode", "htmlTheme");
-  htmlIcon.setAttribute('src', 'img/icon/HTML5_logo.svg.png');
+  htmlIcon.setAttribute('data-src', 'img/icon/HTML5_logo.svg.png');
   defaultIcon.setAttribute('src', '');
   cssIcon.setAttribute('src', '');
   sassIcon.setAttribute('src', '');
