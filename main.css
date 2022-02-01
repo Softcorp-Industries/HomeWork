@@ -788,7 +788,6 @@ footer span {
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
   margin-bottom: -7vw;
   background-color: whitesmoke;
-  background-image: url("img/background_2.png");
   background-size: cover;
   background-position: top;
 }
@@ -1134,7 +1133,6 @@ footer span {
   }
 }
 #imgProjects {
-  background-image: url("img/backgrounds/images-1500.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1576,7 +1574,6 @@ footer span {
 }
 
 #animationProjects {
-  background-image: url("img/backgrounds/animation-1500.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2430,7 +2427,6 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
 }
 
 #buttonProjects {
-  background-image: url("img/backgrounds/hand-1500.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2904,7 +2900,6 @@ label:active:after {
 }
 
 #localStorageProjects {
-  background-image: url("img/backgrounds/storage-1500.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3125,7 +3120,6 @@ label:active:after {
 }
 
 #webPlayerProjects {
-  background-image: url("img/valentin-petkov-uKS_wcTAMZU-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3293,6 +3287,16 @@ label:active:after {
 }
 .audioLlibrary #trackBox .trackBar:nth-child(even) {
   background: #eee;
+}
+
+#uiProjects {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#uiProjects .bgFilter {
+  background-color: var(--bgFilter);
 }
 
 .tabletBox {

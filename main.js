@@ -7,6 +7,8 @@ import * as webPlayerChapter from './js/webPlayerChapter.js';
 import * as storageChapter from './js/storageChapter.js';
 import * as Greeting from './js/greeting.js';
 import * as Observers from './js/observers.js';
+import * as Lazysizes from './js/lazysizes.min.js';
+import * as Bgset from './js/ls.bgset.min.js';
 
 // Project Files
 import * as ToDo1 from './js/projects/todo1.js'
