@@ -1,3 +1,4 @@
+/*
 var audio,
   playBtn,
   muteBtn,
@@ -115,6 +116,8 @@ function initAudioPlayer() {
     durTimeText.innerHTML = durmins + ":" + dursecs;
   }
 }
+*/
+
 
 // frameLooper() animates any style of graphics you wish to move to audio frequency
 // Looping at the default frame rate that the browser provides (approx. 60 fps)
