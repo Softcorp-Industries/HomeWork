@@ -1,6 +1,3 @@
-// Show Carousel
-
-
 /*
 const devBtn = document.querySelector("#devBar-bar");
 let devOpen = false;
