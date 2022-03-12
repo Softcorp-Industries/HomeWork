@@ -15,4 +15,3 @@ else {
 }
 document.getElementById('greeting').innerHTML = greeting;
 
-

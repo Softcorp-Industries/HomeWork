@@ -180,11 +180,6 @@ footer span {
     font-size: 28px;
   }
 }
-@media screen and (min-width: 1024px) {
-  body {
-    font-size: 32px;
-  }
-}
 .darkMode {
   box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -728,6 +723,7 @@ footer span {
   margin: auto;
   width: 95%;
   max-width: 800px;
+  margin-bottom: 2em;
 }
 
 .landing__top {
@@ -783,7 +779,7 @@ footer span {
 .banner__top {
   z-index: 1;
   position: relative;
-  height: 15vw;
+  height: 17vw;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
   margin-bottom: -7vw;
@@ -793,13 +789,12 @@ footer span {
 }
 .banner__top p {
   position: absolute;
-  bottom: calc(7vw - 1em);
+  bottom: 7vw;
   right: 4%;
   transform: rotate(-3.8deg);
-  font-family: "Audiowide", cursive;
-  font-size: 1.5em;
-  color: var(--black);
-  padding-bottom: 0.9em;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--secondaryClr);
   letter-spacing: 2px;
 }
 .banner__top .skills {
@@ -840,14 +835,14 @@ footer span {
   position: relative;
   height: calc(5vw + 5em);
   width: 100%;
-  background-color: var(--bgFilterBlkDrk);
+  background-color: var(--secondaryClr);
 }
 .banner__title h2 {
   position: absolute;
   width: 100%;
   text-align: center;
   bottom: 0.5em;
-  color: var(--jsThemeClr);
+  color: var(--secondaryTxt);
   font-size: 1.5em;
   letter-spacing: 0.25em;
   text-shadow: 0px 0px 5px var(--black);
@@ -872,9 +867,6 @@ footer span {
     height: calc(4vw + 4em);
   }
 
-  .banner__top {
-    font-size: 0.7em;
-  }
   .banner__title {
     height: calc(3.5vw + 3.5em);
   }
@@ -892,13 +884,7 @@ footer span {
   }
 
   .banner__top {
-    height: 13vw;
-    max-height: 130px;
-  }
-  .banner__top p {
-    font-size: 2.5em;
-    right: 10%;
-    padding-bottom: 15px;
+    height: 14vw;
   }
   .banner__title {
     height: calc(5.5vw + 6em);
@@ -915,6 +901,10 @@ footer span {
   .landing__title h1 {
     font-size: 1.6em;
     bottom: 0.5em;
+  }
+
+  .banner__top p {
+    font-size: 1.5em;
   }
 }
 .chapter {
@@ -949,20 +939,28 @@ footer span {
   padding-top: 15px;
 }
 .chapter__header__body article {
-  width: 275px;
+  opacity: 0.85;
+  width: 500px;
+  max-width: 80%;
   margin: auto;
-  border: 1px solid yellow;
-  padding: 0.25rem;
+  padding: 0.5rem;
   text-align: center;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: Var(--white);
-  background-color: var(--bgFilterBlkDrk);
+  line-height: 1.4;
+  color: Var(--black);
+  background-image: url("../dist/img/backgrounds/clouds-72634.jpg");
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   border-radius: 0.5rem;
 }
+.chapter__header__body article p {
+  padding: 0.5em 0.25em;
+}
 .chapter__header__body article span {
-  color: var(--themeTxtClr);
+  font-family: "Audiowide";
+  padding: 1em;
+  color: var(--secondaryClr);
   font-size: 18px;
 }
 
@@ -3593,21 +3591,56 @@ label:active:after {
   font-family: "Audiowide";
   font-size: 14px;
   font-weight: 600;
-  color: var(--bgSecondary);
+  color: var(--secondaryClr);
   text-align: center;
   text-decoration: none;
   letter-spacing: 0.25rem;
+  background-color: whitesmoke;
   border-radius: 1rem;
 }
 .showBtn button:hover {
-  background-color: var(--bgSecondary);
-  color: var(--white);
-  box-shadow: none;
+  background-color: var(--secondaryClr);
+  color: var(--secondaryTxt);
 }
 
 .spacer {
   content: "";
   height: 200px;
+}
+
+#topBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: var(--secondaryClr);
+  /* Set a background color */
+  color: var(--secondaryTxt);
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
+}
+
+#topBtn:hover {
+  background-color: var(--secondaryTxt);
+  /* Add a dark-grey background on hover */
+  color: var(--secondaryClr);
 }
 
 @media screen and (min-width: 400px) {

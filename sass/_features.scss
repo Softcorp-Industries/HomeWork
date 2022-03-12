@@ -100,22 +100,42 @@
     font-family: "Audiowide";
     font-size: 14px;
     font-weight: 600;
-    color: var(--bgSecondary);
+    color: var(--secondaryClr);
     text-align: center;
     text-decoration: none;
     letter-spacing: 0.25rem;
-    //background-color: var(--bgFilterDrk);
+    background-color: whitesmoke;
     border-radius: 1rem;
   }
   button:hover{
-    background-color: var(--bgSecondary);
-    color: var(--white);
-    box-shadow: none;
+    background-color: var(--secondaryClr);
+    color: var(--secondaryTxt);
+    //box-shadow: none;
   }
 }
 .spacer{
   content: "";
   height: 200px;
+}
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--secondaryClr); /* Set a background color */
+  color: var(--secondaryTxt); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#topBtn:hover {
+  background-color: var(--secondaryTxt); /* Add a dark-grey background on hover */
+  color: var(--secondaryClr);
 }
 @media screen and (min-width: 310px) {
 }

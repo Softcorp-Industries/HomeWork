@@ -57,7 +57,7 @@
   &__top {
     z-index: 1;
     position: relative;
-    height: 15vw;
+    height: 17vw;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
     margin-bottom: -7vw;
     background-color: whitesmoke;
@@ -66,14 +66,14 @@
     background-position: top;
     p {
       position: absolute;
-      bottom: calc(7vw - 1em);
+      bottom: calc(7vw);
       right: 4%;
       transform: rotate(-3.8deg);
-      font-family: "Audiowide", cursive;
-      font-size: 1.5em;
-      color: var(--black);
-      //@at-root: 0;
-      padding-bottom: .9em;
+      //font-family: "Audiowide", cursive;
+      font-size: 1.25em;
+      font-weight: 600;
+      color: var(--secondaryClr);
+      //padding-bottom: 1em;
       letter-spacing: 2px;
       //text-shadow: 0px 0px 10px var(--black);
     }
@@ -116,13 +116,13 @@
     position: relative;
     height: calc(5vw + 5em);
     width: 100%;
-    background-color: var(--bgFilterBlkDrk);
+    background-color: var(--secondaryClr);
     h2 {
       position: absolute;
       width: 100%;
       text-align: center;
       bottom: .5em;
-      color: var(--jsThemeClr);
+      color: var(--secondaryTxt);
       font-size: 1.5em;
       letter-spacing: 0.25em;
       text-shadow: 0px 0px 5px var(--black);
@@ -155,9 +155,6 @@
     }
   }
   .banner{
-    &__top{
-      font-size: .7em;
-    }
     &__title{
       height: calc(3.5vw + 3.5em);
       h2{
@@ -184,13 +181,8 @@
   }
   .banner {
     &__top{
-      height: 13vw;
-      max-height: 130px;
-      p{
-        font-size: 2.5em;
-        right: 10%;
-        padding-bottom: 15px;
-      }
+      height: 14vw;
+      
     }
     &__title {
       height: calc(5.5vw + 6em);
@@ -211,6 +203,14 @@
       h1 {
         font-size: 1.6em;
         bottom: .5em;
+      }
+    }
+  }
+  .banner {
+    &__top {
+      p{
+        font-size: 1.5em;
+
       }
     }
   }

@@ -37,19 +37,30 @@
       padding-top: 15px;
       //background-color: var(--bgFilter);
       article {
-        width: 275px;
+        opacity: .85;
+        width: 500px;
+        max-width: 80%;
         margin: auto;
-        border: 1px solid yellow;
-        padding: 0.25rem;
+        //border: 1px solid yellow;
+        padding: 0.5rem;
         text-align: center;
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 2px;
-        color: Var(--white);
-        background-color: var(--bgFilterBlkDrk);
+        line-height: 1.4;
+        color: Var(--black);
+        background-image: url("../dist/img/backgrounds/clouds-72634.jpg");
+        //background-color: var(--bgFilterBlkDrk);
+        box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6),
+    inset 3px 3px 5px rgba(202, 202, 202, 0.6);
         border-radius: 0.5rem;
+        p {
+          padding: .5em .25em;
+        }
         span {
-          color: var(--themeTxtClr);
+          font-family: "Audiowide";
+          padding: 1em;
+          color: var(--secondaryClr);
           font-size: 18px;
         }
       }
