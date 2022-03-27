@@ -21,36 +21,24 @@
         <div id="darkMode" class="darkMode">
             <button id="darkModeBtn" class="dmToggle"></button>
         </div>
-        <div class="navBarBtn">
-            <div class="navBarBtn-menu">
-                <div class="navBarBtn-menu__btn"></div>
-            </div>
-            <ul class="navBarBtn-list">
-                <h1 class="cHeader">Chapters</h1>
-                <li class="listItem">
-                    <a href="#buttonProjects">Buttons</a>
-                </li>
-                <li class="listItem">
-                    <a href="#imgProjects">Images</a>
-                </li>
-                <li class="listItem">
-                    <a href="#animationProjects">Animation</a>
-                </li>
-                <li class="listItem">
-                    <a href="#localStorageProjects">Storage</a>
-                </li>
-                <li class="listItem">
-                    <a href="#webPlayerProjects">Web Player</a>
-                </li>
-            </ul>
+        <div class="navBtn">
+        <div class="navBtn__menu">
+          <div class="navBtn__menu__btn"></div>
         </div>
-        <nav id="navBarSite" class="navBarSite" aria-label="siteNav" title="Web Navigation">
-            <ul class="navBarSite__list">
-                <li><a href="https://guycorpindustries.github.io/Portfolio/">Home</a></li>
-                <li><a class="activePage" href="#">Home Work</a></li>
-                <li><a href="https://guycorpindustries.github.io/The_Program/">The Program</a></li>
-            </ul>
-        </nav>
+      </div>
+        <nav class="pageNav" aria-label="pageNav">
+        <ul id="pageNav-list" class="pageNav-list">
+          <li class="pageNav-listItem"><a href="#">Home</a></li>
+          <li class="pageNav-listItem"><a href="about.html">About</a></li>
+          <li class="pageNav-listItem">
+            <a href="about.html#contact">Contact</a>
+          </li>
+          <p class="cHeader">Chapters</p>
+          <li class="pageNav-listItem"><a href="#theVision">The Vision</a></li>
+          <li class="pageNav-listItem"><a href="#thePath">The Path</a></li>
+          <li class="pageNav-listItem"><a href="#theFuture">The Future</a></li>
+        </ul>
+      </nav>
         <section class="landing">
             <article class="landing__top">
                 <p id="greeting" class="greeting">Welcome</p>
@@ -92,20 +80,12 @@
     </section>
     <main>
         <section class="HWprojects">
+            <header class="featureHeader">
+                <h2>Buttons</h2>
+            </header>
             <section data-bgset="img/backgrounds/hand-1500.jpg" class="buttonProjects lazyload" id="buttonProjects">
                 <div class="bgFilter chapter">
-                    <section class="banner">
-                        <article data-bgset="img/backgrounds/background_2.png" class="banner__top lazyload">
-                            <p>"Home Work"</p>
-                        </article>
-                        <article class="banner__title">
-                            <h2>Buttons</h2>
-                        </article>
-                    </section>
                     <header class="chapter__header">
-                        <article class="chapter__header__title">
-                            <h3>Buttons</h3>
-                        </article>
                         <section class="chapter__header__body">
                             <article>
                                 <span>Synopsis:</span>
@@ -636,8 +616,12 @@
                 </div>
             </section>
 
+            <header class="featureHeader">
+                <h2>Images</h2>
+            </header>
             <section data-bgset="img/backgrounds/images-1500.jpg" class="imgProjects lazyload" id="imgProjects">
                 <div class="bgFilter chapter">
+                    <!--
                     <section class="banner">
                         <article data-bgset="img/backgrounds/background_2.png" class="banner__top lazyload">
                             <p>"Home Work"</p>
@@ -646,10 +630,8 @@
                             <h2>Image Projects</h2>
                         </article>
                     </section>
+                -->
                     <header class="chapter__header">
-                        <article class="chapter__header__title">
-                            <h3>Image</h3>
-                        </article>
                         <section class="chapter__header__body">
                             <article>
                                 <span>Synopsis:</span>
@@ -1025,22 +1007,13 @@
                     <div class="spacer"></div>
                 </div>
             </section>
-
+            <header class="featureHeader">
+                <h2>Animations</h2>
+            </header>
             <section data-bgset="img/backgrounds/animation-1500.jpg" class="animationProjects lazyload"
                 id="animationProjects">
                 <div class="bgFilter chapter">
-                    <section class="banner">
-                        <article data-bgset="img/backgrounds/background_2.png" class="banner__top lazyload">
-                            <p>"Home Work"</p>
-                        </article>
-                        <article class="banner__title">
-                            <h2>Animations</h2>
-                        </article>
-                    </section>
                     <header class="chapter__header">
-                        <article class="chapter__header__title">
-                            <h3>Animations</h3>
-                        </article>
                         <section class="chapter__header__body">
                             <article>
                                 <p>
@@ -1392,21 +1365,13 @@
                 </div>
             </section>
 
+            <header class="featureHeader">
+                <h2>Storage</h2>
+            </header>
             <section data-bgset="img/backgrounds/storage-1500.jpg" class="localStorageProjects lazyload"
                 id="localStorageProjects">
                 <div class="bgFilter">
-                    <section class="banner">
-                        <article data-bgset="img/backgrounds/background_2.png" class="banner__top lazyload">
-                            <p>"Home Work"</p>
-                        </article>
-                        <article class="banner__title">
-                            <h2>Local Storage Projects</h2>
-                        </article>
-                    </section>
                     <header class="chapter__header">
-                        <article class="chapter__header__title">
-                            <h3>Todo Lists</h3>
-                        </article>
                         <section class="chapter__header__body">
                             <article>
                                 <p>
@@ -1527,22 +1492,13 @@
                     <div class="spacer"></div>
                 </div>
             </section>
-
+            <header class="featureHeader">
+                <h2>Web Players</h2>
+            </header>
             <section data-bgset="img/backgrounds/storage-1500.jpg" class="webPlayerProjects lazyload"
                 id="webPlayerProjects">
                 <div class="bgFilter chapter">
-                    <section class="banner">
-                        <article data-bgset="img/backgrounds/background_2.png" class="banner__top lazyload">
-                            <p>"Home Work"</p>
-                        </article>
-                        <article class="banner__title">
-                            <h2>Web Players</h2>
-                        </article>
-                    </section>
                     <section class="chapter__header">
-                        <article class="chapter__header__title">
-                            <h3>Audio & Video Players</h3>
-                        </article>
                         <section class="chapter__header__body">
                             <article>
                                 <p>
@@ -1788,21 +1744,12 @@
                     <div class="spacer"></div>
                 </div>
             </section>
-
+            <header class="featureHeader">
+                <h2>Custom UI</h2>
+            </header>
             <section data-bgset="img/backgrounds/storage-1500.jpg" class="uiProjects lazyload" id="uiProjects">
                 <div class="bgFilter">
-                    <section class="banner">
-                        <article data-bgset="img/backgrounds/background_2.png" class="banner__top lazyload">
-                            <p>"Home Work"</p>
-                        </article>
-                        <article class="banner__title">
-                            <h2>Custom U.I. Projects</h2>
-                        </article>
-                    </section>
                     <header class="chapter__header">
-                        <article class="chapter__header__title">
-                            <h3>Custom UI</h3>
-                        </article>
                         <section class="chapter__header__body">
                             <article>
                                 <p>
