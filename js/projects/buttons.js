@@ -3,9 +3,12 @@
 let selectedBtn = false;
 
 // Grabs the Button that was "clicked" within the Element that has the "ID" of btn
+
 document.querySelector("#btn").addEventListener("click", (e) => {
   console.log(e.target);
+  
   // Add an active Class to the Button Clicked
+
   if (!selectedBtn && e.target.classList.contains("btn")) {
     e.target.classList.add("active");
     selectedBtn = true;

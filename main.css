@@ -2,6 +2,7 @@
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
   --secondaryTxt: #C0FFF4;
+  --txtChange: purple;
   --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
   --jsThemeClr: yellow;
   --htmlThemeClr: orangered;
@@ -40,21 +41,21 @@ body.transition *:after {
   transition: all 750ms;
 }
 
+.darkModeFilter {
+  background-color: var(--bgFilterBlk);
+}
+
 body[data-darkMode=darkMode] {
-  --darkModeBg: rgb(80, 80, 80);
-  --bgDarkMode: rgb(32, 32, 32);
-  --darkModeBgOp: rgba(255, 255, 255, 0.6);
+  --darkModeBg: rgb(0, 0, 0);
+  --darkModeBtn: rgba(189, 189, 189, 0.4);
+  --darkModeBgblk: rgb(0, 0, 0);
   --darkModeTxtClr: white;
-  --darkModeClrlgtOp: rgba(54, 54, 54, 0.6);
-  --darkModeRadialGradeRev: radial-gradient(
-    rgb(240, 240, 240),
-    rgb(110, 110, 110)
-  );
+  --darkModeClrlgt: rgb(54, 54, 54);
   --themeTxtClr: white;
-  --darkModeSec: #e3e3e3;
+  --themeBlk: rgb(99, 99, 99);
   --themeBg: black;
   --themeSec: yellow;
-  --themeBlk: black;
+  --txtChange: #C0FFF4;
 }
 
 body[data-toggleTheme=dark] {
@@ -116,8 +117,8 @@ body[data-toggleMode=jsTheme] {
 *,
 *::before,
 *::after {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
 }
 
@@ -148,17 +149,17 @@ h6 {
 }
 
 footer {
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  text-align: center;
-  width: 95%;
   margin: auto;
-  padding: var(--spacer);
-  background-color: var(--darkModeBgOp);
-  font-size: 10px;
-  letter-spacing: 0.1rem;
+  text-align: center;
+  padding: 1em;
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+}
+footer p {
   color: var(--black);
-  border-radius: 1.5rem;
-  margin-bottom: 20px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  font-size: 0.75em;
+  font-family: "Audiowide";
 }
 
 footer span {
@@ -456,6 +457,24 @@ footer span {
   -webkit-animation-delay: 750ms;
           animation-delay: 750ms;
 }
+.openNav .pageNav-listItem:nth-child(8) {
+  -webkit-animation: navBarAn 300ms ease-in forwards;
+          animation: navBarAn 300ms ease-in forwards;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+.openNav .pageNav-listItem:nth-child(9) {
+  -webkit-animation: navBarAn 300ms ease-in forwards;
+          animation: navBarAn 300ms ease-in forwards;
+  -webkit-animation-delay: 1050ms;
+          animation-delay: 1050ms;
+}
+.openNav .pageNav-listItem:nth-child(10) {
+  -webkit-animation: navBarAn 300ms ease-in forwards;
+          animation: navBarAn 300ms ease-in forwards;
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
 
 @-webkit-keyframes chapterH {
   0% {
@@ -522,7 +541,6 @@ footer span {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   text-align: center;
   margin: auto;
-  margin-top: 2em;
   padding: 1.5em 1em;
   width: 80%;
   max-width: 650px;
@@ -550,11 +568,22 @@ footer span {
   letter-spacing: 4px;
 }
 
+.landing {
+  padding-top: 1em;
+  background-image: url("img/tech_img/mwesigwa-joel-1500.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+}
+
 .welcome p {
-  padding: 1em;
+  padding: 2.5em;
   line-height: 1.4;
   font-size: 0.8em;
+  font-weight: 600;
   letter-spacing: 1px;
+  text-shadow: 0px 0px 3px black;
 }
 .welcome p span {
   font-size: 1.5em;
@@ -569,57 +598,19 @@ footer span {
   margin: auto;
   width: 95%;
   max-width: 800px;
-  margin-bottom: 2em;
 }
 
-.landing__top {
-  background-image: url("img/tech_img/mwesigwa-joel-1500.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top;
-  z-index: 1;
-  position: relative;
-  height: 55vw;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
-  margin-bottom: -7vw;
-}
-.landing__top h2 {
-  position: absolute;
-  bottom: calc(7vw - 1em);
-  right: 4%;
-  transform: rotate(-3.8deg);
-  font-family: "Audiowide", cursive;
-  font-size: 0.8em;
-  color: #C0FFF4;
-  margin-bottom: 0;
-  padding-bottom: 0.5em;
-  letter-spacing: 0.15rem;
-  text-shadow: 0px 0px 7px var(--black);
-}
-.landing__title {
-  position: relative;
-  height: calc(5vw + 5em);
+.title {
   width: 100%;
-  z-index: 0;
-  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
   background-size: cover;
   background-position: top;
-  background-color: var(--themeBlk);
-  border-bottom: 3px solid var(--secondaryClr);
-  box-shadow: 0px 3px 3px #464646;
-}
-.landing__title h1 {
-  position: absolute;
-  width: 100%;
   text-align: center;
-  bottom: 0.75em;
-  font-weight: 900;
-  color: var(--white);
-  font-size: 1.2em;
-  letter-spacing: 0.25em;
   text-shadow: 0px 0px 7px var(--black);
+  color: var(--txtChange);
+  font-weight: 900;
+  font-size: 2.75em;
+  font-family: "The Nautigal";
+  letter-spacing: 2px;
 }
 
 .banner__top {
@@ -696,9 +687,9 @@ footer span {
 
 .greeting {
   width: 100%;
-  padding: 2.5em 0;
+  padding: 1em 0;
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1em;
   font-family: "Audiowide";
   color: #C0FFF4;
   text-shadow: 0px 0px 3px var(--black);
@@ -706,13 +697,6 @@ footer span {
 }
 
 @media screen and (min-width: 400px) {
-  .landing__top h2 {
-    font-size: 0.8em;
-  }
-  .landing__title {
-    height: calc(4vw + 4em);
-  }
-
   .banner__title {
     height: calc(3.5vw + 3.5em);
   }
@@ -721,39 +705,32 @@ footer span {
   }
 }
 @media screen and (min-width: 700px) {
-  .landing__top {
+  .landing {
     background-size: cover;
     background-position: center;
   }
-  .landing__title h1 {
-    font-size: 1.7em;
-  }
 
-  .banner__top {
-    height: 14vw;
-  }
   .banner__title {
     height: calc(5.5vw + 6em);
     max-height: 130px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .landing__top {
-    height: 38vw;
-  }
-  .landing__top h2 {
-    font-size: 0.65em;
-  }
-  .landing__title h1 {
-    font-size: 1.6em;
+  .landing .title {
+    font-size: 4.5em;
     bottom: 0.5em;
   }
 
-  .banner__top p {
-    font-size: 1.5em;
+  .greeting {
+    font-size: 1.2em;
   }
 }
+.banner__top p {
+  font-size: 1.5em;
+}
+
 .chapter {
+  padding-top: 2em;
   min-height: 350px;
   border-top: 3px solid var(--themeBdr);
 }
@@ -2686,7 +2663,7 @@ label:active:after {
   min-width: 100px;
   cursor: pointer;
   height: 30px;
-  background-color: #e6e6e6;
+  background-color: rgb(230, 230, 230);
   letter-spacing: 0.1rem;
   border: none;
   outline: none;
@@ -3013,7 +2990,7 @@ label:active:after {
 .webplayer1 #analyzerBox #graphics {
   width: 100%;
   height: 75px;
-  background-color: #00fd0e;
+  background-color: rgb(0, 253, 14);
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .webplayer1 .btn {
@@ -3021,10 +2998,10 @@ label:active:after {
   width: 40px;
   height: 40px;
   background-color: black;
-  color: #00fd0e;
+  color: rgb(0, 253, 14);
   font-size: calc(0.5vw + 0.75rem);
   outline: none;
-  border: 2px solid #00fd0e;
+  border: 2px solid rgb(0, 253, 14);
   border-radius: 50%;
 }
 .webplayer1 .btn-playPause {
@@ -3043,7 +3020,7 @@ label:active:after {
 .webplayer1 input[type=range]::-moz-range-thumb {
   width: 10px;
   height: 10px;
-  background-color: #00fd0e;
+  background-color: rgb(0, 253, 14);
   border-radius: 50%;
 }
 .webplayer1 input[type=range]::-moz-range-track {
@@ -3075,7 +3052,7 @@ label:active:after {
   transform: translateX(-50%);
   background-color: black;
   padding: 0.25rem;
-  color: #00fd0e;
+  color: rgb(0, 253, 14);
   width: 80px;
   height: 20px;
   text-align: center;
@@ -3133,7 +3110,7 @@ label:active:after {
 .tabletBox .tablet {
   box-shadow: inset -3px -3px 6px rgba(202, 202, 202, 0.6), inset 3px 3px 6px rgba(202, 202, 202, 0.6);
   padding: 0.4rem;
-  background-color: #1d1d1d;
+  background-color: rgb(29, 29, 29);
   border-radius: 1.5rem;
   text-align: center;
 }
@@ -3221,7 +3198,7 @@ label:active:after {
   position: relative;
   width: 565px;
   height: 452px;
-  background-color: #1d1d1d;
+  background-color: rgb(29, 29, 29);
 }
 .iPadBox .iPad__display iframe {
   position: absolute;
@@ -3234,12 +3211,12 @@ label:active:after {
 }
 .iPadBox .iPad .frontCam {
   width: 30px;
-  background-color: #1d1d1d;
+  background-color: rgb(29, 29, 29);
   border-radius: 0em 1em 1em 0em;
 }
 .iPadBox .iPad .iPadNav {
   width: 50px;
-  background-color: #1d1d1d;
+  background-color: rgb(29, 29, 29);
   border-radius: 1em 0em 0em 1em;
 }
 
@@ -3330,14 +3307,14 @@ label:active:after {
   background-image: linear-gradient(to left top, #c0fff4, var(--secondaryClr));
   border-top: 3px solid var(--secondaryTxt);
   border-bottom: 3px solid var(--secondaryClr);
-  box-shadow: 0px 3px 3px #464646, 0px -3px 3px #464646;
+  box-shadow: 0px 3px 3px rgb(70, 70, 70), 0px -3px 3px rgb(70, 70, 70);
 }
 
 .tripleMonitors {
+  margin: auto;
   padding: var(--mdSpacer) 0em;
   max-width: 1000px;
-  margin: auto;
-  margin-bottom: 50px;
+  height: 100%;
 }
 .tripleMonitors h2 {
   color: var(--white);
@@ -3436,29 +3413,30 @@ label:active:after {
 }
 
 #topBtn {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   display: none;
   /* Hidden by default */
   position: fixed;
   /* Fixed/sticky position */
   bottom: 20px;
   /* Place the button at the bottom of the page */
-  right: 30px;
+  right: 10px;
   /* Place the button 30px from the right */
+  width: 50px;
+  height: 50px;
   z-index: 99;
   /* Make sure it does not overlap */
   border: none;
   /* Remove borders */
   outline: none;
   /* Remove outline */
-  background-color: var(--secondaryClr);
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
   /* Set a background color */
   color: var(--secondaryTxt);
   /* Text color */
   cursor: pointer;
   /* Add a mouse pointer on hover */
-  padding: 15px;
-  /* Some padding */
-  border-radius: 10px;
+  border-radius: 50%;
   /* Rounded corners */
   font-size: 18px;
   /* Increase font size */
