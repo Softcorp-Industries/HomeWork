@@ -5,6 +5,7 @@
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
   --secondaryTxt: #C0FFF4;
+  --txtChange: purple;
 
   --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
 
@@ -53,21 +54,22 @@ body.transition *:after {
   transition: all 750ms;
 }
 
+.darkModeFilter {
+  background-color: var(--bgFilterBlk);
+}
+
 body[data-darkMode="darkMode"] {
-  --darkModeBg: rgb(80, 80, 80);
-  --bgDarkMode: rgb(32, 32, 32);
-  --darkModeBgOp: rgba(255, 255, 255, 0.6);
-  --darkModeTxtClr: white;
-  --darkModeClrlgtOp: rgba(54, 54, 54, 0.6);
-  --darkModeRadialGradeRev: radial-gradient(
-    rgb(240, 240, 240),
-    rgb(110, 110, 110)
-  );
-  --themeTxtClr: white;
-  --darkModeSec: #e3e3e3;
+  --darkModeBg: rgb(0, 0, 0); // from rgb(250, 250, 250)
+  --darkModeBtn: rgba(189, 189, 189, 0.4);
+
+  --darkModeBgblk: rgb(0, 0, 0); // from
+  --darkModeTxtClr: white; // from rgb(54, 54, 54)
+  --darkModeClrlgt: rgb(54, 54, 54); // from
+  --themeTxtClr: white; // from
+  --themeBlk: rgb(99, 99, 99); // from whitesmoke
   --themeBg: black;
   --themeSec: yellow;
-  --themeBlk: black;
+  --txtChange: #C0FFF4;
 }
 
 body[data-toggleTheme="dark"] {
@@ -126,8 +128,8 @@ body[data-toggleMode="jsTheme"] {
 *,
 *::before,
 *::after {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
 }
 
@@ -157,17 +159,17 @@ h6 {
 }
 
 footer {
-  @include darkMode;
-  text-align: center;
-  width: 95%;
   margin: auto;
-  padding: var(--spacer);
-  background-color: var(--darkModeBgOp);
-  font-size: 10px;
-  letter-spacing: 0.1rem;
-  color: var(--black);
-  border-radius: 1.5rem;
-  margin-bottom: 20px;
+  text-align: center;
+  padding: 1em;
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+  p {
+    color: var(--black);
+    line-height: 1.4;
+    letter-spacing: 1px;
+    font-size: .75em;
+    font-family: "Audiowide";
+  }
 }
 footer span {
   color: red;
@@ -195,9 +197,7 @@ footer span {
 }
 
 @media screen and (min-width: 1024px) {
-  body{
-    //font-size: 32px;
-  }
+  
 }
 
 @media screen and (min-width: 1200px) {

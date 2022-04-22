@@ -1,5 +1,11 @@
 // Dark Mode and Local Storage
 const darkModeBtn = document.getElementById("darkModeBtn");
+const darkModeButtons = document.getElementById("darkModeButtons");
+const darkModeImages = document.getElementById("darkModeImages");
+const darkModeAnimations = document.getElementById("darkModeAnimations");
+const darkModeStorage = document.getElementById("darkModeStorage");
+const darkModeWebPlayers = document.getElementById("darkModeWebPlayers");
+const darkModeUI = document.getElementById("darkModeUI");
 
 let darkModeSt = localStorage.getItem("darkModeSt");
 
@@ -9,7 +15,13 @@ const enableDarkMode = () => {
   document.body.setAttribute("data-darkMode", "darkMode");
   darkModeBtn.style.backgroundImage = "url(img/icon/sun_light_mode_day-2-512.webp)"
   darkModeBtn.classList.add("darkModeAnim");
-  darkModeBtn.classList.remove("darkModeAnimRev");
+  darkModeBtn.classList.remove("darkModeAnimRev")
+  darkModeButtons.classList.add("darkModeFilter");
+  darkModeImages.classList.add("darkModeFilter");
+  darkModeAnimations.classList.add("darkModeFilter");
+  darkModeStorage.classList.add("darkModeFilter");
+  darkModeWebPlayers.classList.add("darkModeFilter");
+  darkModeUI.classList.add("darkModeFilter");
   localStorage.setItem("darkModeSt", "enabled");
 };
 const disableDarkMode = () => {
@@ -17,6 +29,12 @@ const disableDarkMode = () => {
   darkModeBtn.style.backgroundImage = "url(img/icon/936949-200.png)"
   darkModeBtn.classList.add("darkModeAnimRev");
   darkModeBtn.classList.remove("darkModeAnim");
+  darkModeButtons.classList.remove("darkModeFilter");
+  darkModeImages.classList.remove("darkModeFilter");
+  darkModeAnimations.classList.remove("darkModeFilter");
+  darkModeStorage.classList.remove("darkModeFilter");
+  darkModeWebPlayers.classList.remove("darkModeFilter");
+  darkModeUI.classList.remove("darkModeFilter");
   localStorage.setItem("darkModeSt", "disabled");
 };
 if (darkModeSt === "enabled") {

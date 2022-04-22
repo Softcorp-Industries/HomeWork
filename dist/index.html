@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Roboto:ital,wght@0,500;0,700;0,900;1,300&family=The+Nautigal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" type="image/png" href="img/favicon2.jpg" />
     <title>Home Work</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
@@ -16,8 +18,8 @@
 </head>
 
 <body data-toggleMode="" data-darkMode='light' data-toggleTheme='light'>
-
-    <header>
+    <section class="darkModeFilter">
+        <header class="landing">
         <div id="darkMode" class="darkMode">
             <button id="darkModeBtn" class="dmToggle"></button>
         </div>
@@ -34,57 +36,53 @@
             <a href="about.html#contact">Contact</a>
           </li>
           <p class="cHeader">Chapters</p>
-          <li class="pageNav-listItem"><a href="#theVision">The Vision</a></li>
-          <li class="pageNav-listItem"><a href="#thePath">The Path</a></li>
-          <li class="pageNav-listItem"><a href="#theFuture">The Future</a></li>
+          <li class="pageNav-listItem"><a href="#buttonProjects">Buttons</a></li>
+          <li class="pageNav-listItem"><a href="#imgProjects">Images</a></li>
+          <li class="pageNav-listItem"><a href="#animationProjects">Animations</a></li>
+          <li class="pageNav-listItem"><a href="#localStorageProjects">Local Storage</a></li>
+          <li class="pageNav-listItem"><a href="#webPlayerProjects">Web Players</a></li>
+          <li class="pageNav-listItem"><a href="#uiProjects">Custom UI</a></li>
         </ul>
-      </nav>
-        <section class="landing">
-            <article class="landing__top">
+        </nav>
+            <article class="top">
+                <h1 class="title">"Softcorp Industries"</h1>
                 <p id="greeting" class="greeting">Welcome</p>
             </article>
-            <article class="landing__title">
-                <h1>Home Work</h1>
-            </article>
-        </section>
-    </header>
-    <section class="welcome">
-        <header class="featureHeader">
-            <h2>"Softcorp Industries"</h2>
-        </header>
-        <article class="welcome__header">
-            <p>
-                Welcome to the <span>"Home Work"</span> web site, the second of three
-                web sites that I'm building on my path to becoming a Front-End Web
-                Developer. I've created this page to display small projects and skills that I'm learning on my path as a
-                Web Developer.
-            </p>
-        </article>
-    </section>
-    <section class="triple-container">
-        <div class="tripleMonitors">
-            <h2>Get with <span>"The Program"</span></h2>
-            <section class="imgs">
-                <picture class="img1 img">
-                    <img data-src="img/tech_img/annie-spratt-500px.jpg" alt="">
-                </picture>
-                <picture class="img2 img">
-                    <img data-src="img/tech_img/dollar-gill-500px.jpg" alt="">
-                </picture>
-                <picture class="img3 img">
-                    <img data-src="img/tech_img/monika-kozub-500px.jpg" alt="">
-                </picture>
+            <section class="welcome">
+                <article class="welcome__header">
+                    <p>
+                        Welcome to the <span>"Home Work"</span> web site, the second of three
+                        web sites that I'm building on my path to becoming a Front-End Web
+                        Developer. I've created this page to display small projects and skills that I'm learning on my path to becoming a
+                        Web Developer.
+                    </p>
+                </article>
             </section>
-            <h2>Learn to <span>"Code"</span></h2>
-        </div>
-    </section>
-    <main>
+    </header>
+        <main>
+        <section class="triple-container">
+            <div class="tripleMonitors">
+                <h2>Get with <span>"The Program"</span></h2>
+                <section class="imgs">
+                    <picture class="img1 img">
+                        <img data-src="img/tech_img/annie-spratt-500px.jpg" alt="">
+                    </picture>
+                    <picture class="img2 img">
+                        <img data-src="img/tech_img/dollar-gill-500px.jpg" alt="">
+                    </picture>
+                    <picture class="img3 img">
+                        <img data-src="img/tech_img/monika-kozub-500px.jpg" alt="">
+                    </picture>
+                </section>
+                <h2>Learn to <span>"Code"</span></h2>
+            </div>
+        </section>
         <section class="HWprojects">
-            <header class="featureHeader">
-                <h2>Buttons</h2>
-            </header>
             <section data-bgset="img/backgrounds/hand-1500.jpg" class="buttonProjects lazyload" id="buttonProjects">
-                <div class="bgFilter chapter">
+                <div class="chapter" id="darkModeButtons">
+                    <header class="featureHeader">
+                        <h2>Buttons</h2>
+                    </header>
                     <header class="chapter__header">
                         <section class="chapter__header__body">
                             <article>
@@ -616,11 +614,11 @@
                 </div>
             </section>
 
-            <header class="featureHeader">
-                <h2>Images</h2>
-            </header>
             <section data-bgset="img/backgrounds/images-1500.jpg" class="imgProjects lazyload" id="imgProjects">
-                <div class="bgFilter chapter">
+                <div class="chapter" id="darkModeImages">
+                    <header class="featureHeader">
+                        <h2>Images</h2>
+                    </header>
                     <!--
                     <section class="banner">
                         <article data-bgset="img/backgrounds/background_2.png" class="banner__top lazyload">
@@ -1007,12 +1005,13 @@
                     <div class="spacer"></div>
                 </div>
             </section>
-            <header class="featureHeader">
-                <h2>Animations</h2>
-            </header>
+
             <section data-bgset="img/backgrounds/animation-1500.jpg" class="animationProjects lazyload"
-                id="animationProjects">
-                <div class="bgFilter chapter">
+            id="animationProjects">
+            <div class="chapter" id="darkModeAnimations">
+                    <header class="featureHeader">
+                        <h2>Animations</h2>
+                    </header>
                     <header class="chapter__header">
                         <section class="chapter__header__body">
                             <article>
@@ -1365,12 +1364,12 @@
                 </div>
             </section>
 
-            <header class="featureHeader">
-                <h2>Storage</h2>
-            </header>
             <section data-bgset="img/backgrounds/storage-1500.jpg" class="localStorageProjects lazyload"
-                id="localStorageProjects">
-                <div class="bgFilter">
+            id="localStorageProjects">
+                <div class="chapter" id="darkModeStorage">
+                    <header class="featureHeader">
+                        <h2>Storage</h2>
+                    </header>
                     <header class="chapter__header">
                         <section class="chapter__header__body">
                             <article>
@@ -1492,12 +1491,13 @@
                     <div class="spacer"></div>
                 </div>
             </section>
-            <header class="featureHeader">
-                <h2>Web Players</h2>
-            </header>
+
             <section data-bgset="img/backgrounds/storage-1500.jpg" class="webPlayerProjects lazyload"
-                id="webPlayerProjects">
-                <div class="bgFilter chapter">
+            id="webPlayerProjects">
+                <div class="chapter" id="darkModeWebPlayers">
+                    <header class="featureHeader">
+                        <h2>Web Players</h2>
+                    </header>
                     <section class="chapter__header">
                         <section class="chapter__header__body">
                             <article>
@@ -1744,11 +1744,12 @@
                     <div class="spacer"></div>
                 </div>
             </section>
-            <header class="featureHeader">
-                <h2>Custom UI</h2>
-            </header>
+            
             <section data-bgset="img/backgrounds/storage-1500.jpg" class="uiProjects lazyload" id="uiProjects">
-                <div class="bgFilter">
+                <div class="chapter" id="darkModeUI">
+                    <header class="featureHeader">
+                        <h2>Custom UI</h2>
+                    </header>
                     <header class="chapter__header">
                         <section class="chapter__header__body">
                             <article>
@@ -2002,11 +2003,17 @@
             </section>
 
         </section>
-    </main>
-    <button id="topBtn" title="Go to top">Top</button>
-    <footer>
-        Copyright &copy; 2021, Christopher T. Guy <span>O/A</span> Softcorp Industries
-    </footer>
+        </main>
+        <button id="topBtn" title="Go to top">Top</button>
+        <footer>
+        <p>
+            Christopher T. Guy <span>O/A</span> Softcorp Industries
+        </p>
+        <p>
+            Copyright &copy; 2021
+        </p>
+        </footer>
+    </section>
     <script>
     </script>
 </body>

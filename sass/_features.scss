@@ -8,11 +8,12 @@
   box-shadow: 0px 3px 3px rgb(70, 70, 70), 0px -3px 3px rgb(70, 70, 70);
 }
 .tripleMonitors {
+  margin: auto;
   padding: var(--mdSpacer) 0em;
   //background-color: var(--bgDarkMode);
   max-width: 1000px;
-  margin: auto;
-  margin-bottom: 50px;
+  height: 100%;
+  //margin-bottom: 50px;
   h2 {
     color: var(--white);
     padding: 1em;
@@ -118,18 +119,22 @@
   height: 200px;
 }
 #topBtn {
+  @include darkMode; 
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
+  right: 10px; /* Place the button 30px from the right */
+  width: 50px;
+  height: 50px;
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: var(--secondaryClr); /* Set a background color */
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+  /* Set a background color */
   color: var(--secondaryTxt); /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
+  //padding: 15px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
   font-size: 18px; /* Increase font size */
 }
 
