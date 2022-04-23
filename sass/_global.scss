@@ -5,7 +5,7 @@
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
   --secondaryTxt: #C0FFF4;
-  --txtChange: purple;
+  --txtChange: #C0FFF4;
 
   --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
 
@@ -27,7 +27,7 @@
   --darkModeTxtlgt: #e3e3e3;
   
   --bgFilter: rgba(255, 255, 255, 0.2);
-  --bgFilterBlk: rgba(0, 0, 0, 0.4);
+  --bgFilterBlk: rgba(0, 0, 0, 0.55);
   --bgFilterBlkDrk: rgba(0, 0, 0, 0.8);
   --bgFilterDrk: rgba(255, 255, 255, 0.8);
   
@@ -69,7 +69,7 @@ body[data-darkMode="darkMode"] {
   --themeBlk: rgb(99, 99, 99); // from whitesmoke
   --themeBg: black;
   --themeSec: yellow;
-  --txtChange: #C0FFF4;
+  --txtChange: purple;
 }
 
 body[data-toggleTheme="dark"] {

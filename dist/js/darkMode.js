@@ -1,5 +1,6 @@
 // Dark Mode and Local Storage
 const darkModeBtn = document.getElementById("darkModeBtn");
+const darkModeLanding = document.getElementById("darkModeLanding");
 const darkModeButtons = document.getElementById("darkModeButtons");
 const darkModeImages = document.getElementById("darkModeImages");
 const darkModeAnimations = document.getElementById("darkModeAnimations");
@@ -16,6 +17,7 @@ const enableDarkMode = () => {
   darkModeBtn.style.backgroundImage = "url(img/icon/sun_light_mode_day-2-512.webp)"
   darkModeBtn.classList.add("darkModeAnim");
   darkModeBtn.classList.remove("darkModeAnimRev")
+  darkModeLanding.classList.add("darkModeFilter");
   darkModeButtons.classList.add("darkModeFilter");
   darkModeImages.classList.add("darkModeFilter");
   darkModeAnimations.classList.add("darkModeFilter");
@@ -29,6 +31,7 @@ const disableDarkMode = () => {
   darkModeBtn.style.backgroundImage = "url(img/icon/936949-200.png)"
   darkModeBtn.classList.add("darkModeAnimRev");
   darkModeBtn.classList.remove("darkModeAnim");
+  darkModeLanding.classList.remove("darkModeFilter");
   darkModeButtons.classList.remove("darkModeFilter");
   darkModeImages.classList.remove("darkModeFilter");
   darkModeAnimations.classList.remove("darkModeFilter");

@@ -8,12 +8,9 @@
   box-shadow: 0px 3px 3px rgb(70, 70, 70), 0px -3px 3px rgb(70, 70, 70);
 }
 .tripleMonitors {
-  margin: auto;
   padding: var(--mdSpacer) 0em;
-  //background-color: var(--bgDarkMode);
   max-width: 1000px;
-  height: 100%;
-  //margin-bottom: 50px;
+  margin: auto;
   h2 {
     color: var(--white);
     padding: 1em;
@@ -34,10 +31,10 @@
     margin: auto;
     padding: 2em;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    //align-items: center;
+    //justify-content: center;
     width: 95%;
-    max-width: 650px;
+    max-width: 850px;
     border-radius: 1.5rem;
     .img {
       perspective: 200px;
@@ -47,7 +44,7 @@
         width: 100%;
         height: 100%;
         opacity: 0.8;
-        border: 3px solid var(--secondaryClr);
+        border: 2px solid black;
       }
     }
     .img1 {
@@ -146,7 +143,6 @@
 }
 
 @media screen and (min-width: 400px) {
-  
   .skills {
     .logo-bar__img {
       img {
@@ -164,14 +160,14 @@
 }
 
 @media screen and (min-width: 550px) {
-  .tripleMonitors{
-    h2{
+  .tripleMonitors {
+    h2 {
       text-align: left;
     }
     h2:nth-last-child(1) {
       text-align: right;
     }
-  }  
+  }
   .skills {
     h1 {
       font-size: calc(1.5vw + 2rem);
@@ -184,17 +180,47 @@
 }
 
 @media screen and (min-width: 715px) {
-
+  .tripleMonitors {
+    h2 {
+      font-size: 1.1em;
+      padding: 1.5em;
+    }
+    span {
+      font-size: 1.75em;
+    }
+    .imgs {
+      padding: 3em;
+      .img {
+        min-width: 5.5em;
+        min-height: 4.25em;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  
+  .tripleMonitors {
+    .imgs {
+      .img {
+        min-width: 8.25em;
+        min-height: 6.75em;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
 }
 
-
+@media (min-width: 550px) {
+  
+}
+@media (min-width: 700px) {
+  
+}
+@media (min-width: 1000px) {
+  
+}
 
 
 
