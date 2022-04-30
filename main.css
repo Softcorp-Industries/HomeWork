@@ -2,7 +2,7 @@
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
   --secondaryTxt: #C0FFF4;
-  --txtChange: #C0FFF4;
+  --txtChange: purple;
   --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
   --jsThemeClr: yellow;
   --htmlThemeClr: orangered;
@@ -15,7 +15,7 @@
   --themeBlk: whitesmoke;
   --themeWht: black;
   --darkModeBg: #e3e3e3;
-  --darkModeTxtClr: rgb(54, 54, 54);
+  --darkModeTxtClr: rgb(25, 25, 25);
   --darkModeTxtlgt: #e3e3e3;
   --bgFilter: rgba(255, 255, 255, 0.2);
   --bgFilterBlk: rgba(0, 0, 0, 0.55);
@@ -55,13 +55,20 @@ body[data-darkMode=darkMode] {
   --themeBlk: rgb(99, 99, 99);
   --themeBg: black;
   --themeSec: yellow;
-  --txtChange: purple;
+  --txtChange: #C0FFF4;
 }
 
 body[data-toggleTheme=dark] {
   --inputToggleTheme: grey;
   --inputToggleThemeFilter: var(--bgFilterBlkDrk);
   --inputToggleTxt: var(--white);
+}
+
+body {
+  background-image: url("./img/backgrounds/clouds_72634.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*
@@ -122,17 +129,9 @@ body[data-toggleMode=jsTheme] {
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Bedrock", sans-serif;
-  font-size: 10px;
-  background-color: var(--bgDarkMode);
-}
-
 hr {
-  margin: auto;
-  width: 95%;
-  max-width: 550px;
-  margin-bottom: 15px;
+  height: 8px;
+  background-color: var(--secondaryClr);
 }
 
 p {
@@ -337,7 +336,7 @@ footer span {
   display: none;
   margin-bottom: 15px;
   color: var(--txtChange);
-  text-shadow: 0px 0px 2px var(--darkModeTxtClr);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   letter-spacing: 0.15em;
   font-weight: 600;
 }
@@ -351,24 +350,26 @@ footer span {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   display: block;
   width: 100%;
-  padding: 0.75rem 1.25rem;
-  color: var(--secondaryClr);
+  padding: 0.5rem 1rem;
+  color: var(--txtChange);
   font-family: "Audiowide";
-  font-size: 1rem;
+  font-size: 0.8em;
   font-weight: 900;
   text-align: center;
   text-decoration: none;
   letter-spacing: 2px;
   border-radius: 1.5rem;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 .pageNav .pageNav-list .pageNav-listItem:hover {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  background-color: var(--secondaryClr);
+  background-color: var(--txtChange);
   box-shadow: none;
   font-weight: 900;
 }
 .pageNav .pageNav-list a:hover {
-  color: white;
+  color: var(--secondaryClr);
+  text-shadow: 0px 0px 2px var(--darkModeTxtClr);
 }
 .pageNav .pageNav-list a:active {
   width: 100%;
@@ -540,35 +541,33 @@ footer span {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   text-align: center;
   margin: auto;
-  padding: 1.5em 1em;
-  width: 80%;
-  max-width: 650px;
+  margin-top: 2em;
+  padding: 1em 0;
+  width: 95%;
+  max-width: 600px;
   border-radius: 1rem;
   background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
   background-size: cover;
   background-color: var(--themeBlk);
   margin-bottom: 50px;
 }
-.featureHeader p {
-  font-family: "Bedrock";
+.featureHeader .author {
+  font-family: "The Nautigal";
   color: var(--white);
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 600;
   letter-spacing: 3px;
-  padding: 0.25em;
   text-shadow: 0px 0px 3px var(--black);
 }
 .featureHeader h2 {
-  font-family: "audiowide", cursive;
   text-shadow: 0px 0px 5px var(--black);
-  font-size: 1.25em;
+  font-size: 1.75em;
   font-weight: 900;
   color: var(--secondaryTxt);
   letter-spacing: 4px;
 }
 
 .landing {
-  background-image: url("img/tech_img/mwesigwa-joel-1500.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -581,18 +580,17 @@ footer span {
   font-size: 0.8em;
   font-weight: 600;
   letter-spacing: 1px;
-  text-shadow: 0px 0px 3px black;
 }
 .welcome p span {
   font-size: 1.75em;
   color: var(--txtChange);
-  text-shadow: 0px 0px 2px var(--darkModeTxtClr);
+  text-shadow: 0px 0px 5px var(--darkModeBg);
   font-family: "Audiowide";
   font-weight: 900;
   letter-spacing: 2px;
 }
 .welcome__header {
-  color: var(--white);
+  color: var(--darkModeTxtClr);
   margin: auto;
   width: 95%;
   max-width: 800px;
@@ -604,10 +602,10 @@ footer span {
   background-size: cover;
   background-position: top;
   text-align: center;
-  text-shadow: 0px 0px 7px var(--black);
-  color: var(--secondaryTxt);
+  text-shadow: 0px 0px 7px var(--darkModeBg);
+  color: var(--txtChange);
   font-weight: 900;
-  font-size: 2.75em;
+  font-size: 3em;
   font-family: "The Nautigal";
   letter-spacing: 2px;
 }
@@ -690,8 +688,8 @@ footer span {
   text-align: center;
   font-size: 1em;
   font-family: "Audiowide";
-  color: #C0FFF4;
-  text-shadow: 0px 0px 3px var(--black);
+  color: var(--txtChange);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   letter-spacing: 2px;
 }
 
@@ -704,11 +702,6 @@ footer span {
   }
 }
 @media screen and (min-width: 700px) {
-  .landing {
-    background-size: cover;
-    background-position: center;
-  }
-
   .banner__title {
     height: calc(5.5vw + 6em);
     max-height: 130px;
@@ -717,7 +710,6 @@ footer span {
 @media screen and (min-width: 1024px) {
   .landing .title {
     font-size: 4.5em;
-    bottom: 0.5em;
   }
 
   .greeting {
@@ -734,7 +726,7 @@ footer span {
   border-top: 3px solid var(--themeBdr);
 }
 .chapter__header__body {
-  width: 95%;
+  width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -768,27 +760,27 @@ footer span {
 }
 
 .project {
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
-  width: 90%;
+  width: 95%;
   border: none;
   padding: 1rem;
 }
 .project__header__title {
   padding-top: 60px;
   text-align: center;
-  text-shadow: 0px 0px 5px var(--black);
+  text-shadow: 0px 0px 5px var(--darkModeTxtClr);
   letter-spacing: 2px;
-  color: white;
-}
-.project__header__title h2 {
-  font-size: calc(2vw + 1.5rem);
+  color: var(--txtChange);
+  font-size: calc(3vw + 3em);
+  font-family: "The Nautigal";
+  font-weight: 700;
   margin-bottom: 5px;
 }
-.project__header__title h5 {
+.project__header h5 {
   font-size: 12px;
 }
-.project__header__title h5 span {
+.project__header h5 span {
   color: var(--themeTxtClr);
   text-shadow: none;
   font-size: 16px;
@@ -2227,12 +2219,6 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   color: var(--darkModeTxtClr);
 }
 
-#buttonProjects {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
 #buttonProjects .bgFilter {
   background-color: var(--bgFilterBlk);
   z-index: 1;
