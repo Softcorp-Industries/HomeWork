@@ -1,10 +1,9 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-
 .landing {
   //padding-top: 1em;
-  background-image: url("img/tech_img/mwesigwa-joel-1500.jpg");
+  //background-image: url("img/tech_img/mwesigwa-joel-1500.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -12,39 +11,38 @@
 }
 .welcome {
   p {
-      padding: 3em;
-      line-height: 1.4;
-      font-size: 0.8em;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-shadow: 0px 0px 3px black;
-      span {
-        font-size: 1.75em;
-        color: var(--txtChange);
-        text-shadow: 0px 0px 2px var(--darkModeTxtClr);
-        font-family: "Audiowide";
-        font-weight: 900;
-        letter-spacing: 2px;
-      }
-    }
-    &__header {
-      color: var(--white);
-      margin: auto;
-      width: 95%;
-      max-width: 800px;
-      
+    padding: 3em;
+    line-height: 1.4;
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    //text-shadow: 0px 0px 3px black;
+    span {
+      font-size: 1.75em;
+      color: var(--txtChange);
+      text-shadow: 0px 0px 5px var(--darkModeBg);
+      font-family: "Audiowide";
+      font-weight: 900;
+      letter-spacing: 2px;
     }
   }
+  &__header {
+    color: var(--darkModeTxtClr);
+    margin: auto;
+    width: 95%;
+    max-width: 800px;
+  }
+}
 .title {
-  padding-top: .25em;
+  padding-top: 0.25em;
   width: 100%;
   background-size: cover;
   background-position: top;
   text-align: center;
-  text-shadow: 0px 0px 7px var(--black);
-  color: var(--secondaryTxt);
+  text-shadow: 0px 0px 7px var(--darkModeBg);
+  color: var(--txtChange);
   font-weight: 900;
-  font-size: 2.75em;
+  font-size: 3em;
   font-family: "The Nautigal";
   letter-spacing: 2px;
 }
@@ -116,7 +114,7 @@
       position: absolute;
       width: 100%;
       text-align: center;
-      bottom: .5em;
+      bottom: 0.5em;
       color: var(--secondaryTxt);
       font-size: 1.5em;
       letter-spacing: 0.25em;
@@ -129,9 +127,9 @@
   padding: 1em 0;
   text-align: center;
   font-size: 1em;
-  font-family: 'Audiowide';
-  color: #C0FFF4;
-  text-shadow: 0px 0px 3px var(--black);
+  font-family: "Audiowide";
+  color: var(--txtChange);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   letter-spacing: 2px;
 }
 
@@ -139,10 +137,10 @@
 }
 
 @media screen and (min-width: 400px) {
-  .banner{
-    &__title{
+  .banner {
+    &__title {
       height: calc(3.5vw + 3.5em);
-      h2{
+      h2 {
         font-size: 1.1em;
       }
     }
@@ -153,12 +151,7 @@
 }
 
 @media screen and (min-width: 700px) {
-  .landing {
-    background-size: cover;
-    background-position: center;
-  }
   .banner {
-    
     &__title {
       height: calc(5.5vw + 6em);
       max-height: 130px;
@@ -168,26 +161,21 @@
 
 @media screen and (min-width: 1024px) {
   .landing {
-      .title {
-        font-size: 4.5em;
-        bottom: .5em;
-      }
-    }
-    .greeting {
-      font-size: 1.2em;
+    .title {
+      font-size: 4.5em;
     }
   }
-  .banner {
-    &__top {
-      p{
-        font-size: 1.5em;
-
-      }
+  .greeting {
+    font-size: 1.2em;
+  }
+}
+.banner {
+  &__top {
+    p {
+      font-size: 1.5em;
     }
   }
-
-
-@media screen and (min-width: 1200px) {
-    
 }
 
+@media screen and (min-width: 1200px) {
+}

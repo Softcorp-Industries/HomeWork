@@ -3,10 +3,6 @@
 
 #buttonProjects {
   //background-image: url("img/backgrounds/hand-1500.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   .bgFilter {
     background-color: var(--bgFilterBlk);
     z-index: 1;
@@ -15,6 +11,10 @@
 
 #buttonProject {
   display: none;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //background-attachment: fixed;
 }
 #buttonProject.showProject {
   display: block;

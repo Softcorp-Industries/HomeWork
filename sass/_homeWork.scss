@@ -2,37 +2,41 @@
 @use "_mixin" as *;
 
 .featureHeader {
-    @include darkMode;
-    text-align: center;
-    margin: auto;
-    padding: 1.5em 1em;
-    width: 80%;
-    max-width: 650px;
-    border-radius: 1rem;
-    background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
-    //border: 2px solid var(--jsThemeClr);
-    //background-image: url("img/backgrounds/header_background_2.png");
-    background-size: cover;
-    background-color: var(--themeBlk);
-    margin-bottom: 50px;
-    p {
-      font-family: "Bedrock";
-      color: var(--white);
-      font-size: 1em;
-      font-weight: 600;
-      letter-spacing: 3px;
-      padding: .25em;
-      text-shadow: 0px 0px 3px var(--black);
-    }
-    h2 {
-      font-family: "audiowide", cursive;
-      text-shadow: 0px 0px 5px var(--black);
-      font-size: 1.25em;
-      font-weight: 900;
-      color: var(--secondaryTxt);
-      letter-spacing: 4px;
-    }
+  @include darkMode;
+  text-align: center;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em 0;
+  width: 95%;
+  max-width: 600px;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+    to left top,
+    var(--secondaryTxt),
+    var(--secondaryClr)
+  );
+  //border: 2px solid var(--jsThemeClr);
+  //background-image: url("img/backgrounds/header_background_2.png");
+  background-size: cover;
+  background-color: var(--themeBlk);
+  margin-bottom: 50px;
+  .author {
+    font-family: "The Nautigal";
+    color: var(--white);
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    //padding: .25em;
+    text-shadow: 0px 0px 3px var(--black);
   }
+  h2 {
+    text-shadow: 0px 0px 5px var(--black);
+    font-size: 1.75em;
+    font-weight: 900;
+    color: var(--secondaryTxt);
+    letter-spacing: 4px;
+  }
+}
 
   
 @media (min-width: 310px) {
