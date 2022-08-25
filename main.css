@@ -253,7 +253,7 @@ footer span {
   height: 0.24em;
   border-radius: 25%;
   background-color: var(--secondaryClr);
-  box-shadow: 0px 0px 2px var(--black);
+  box-shadow: 0px 0px 2px var(--secondaryTxt);
   transition: all 0.5s ease-in-out;
 }
 .navBtn__menu__btn::before {
@@ -338,23 +338,23 @@ footer span {
   color: var(--txtChange);
   text-shadow: 0px 0px 3px var(--darkModeBg);
   letter-spacing: 0.15em;
-  font-weight: 600;
+  font-weight: 900;
 }
 .pageNav .pageNav-list .pageNav-listItem {
   margin-bottom: 7px;
   background: none;
-  background-color: var(--white);
   border-radius: 1.5rem;
 }
 .pageNav .pageNav-list a {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+  background-color: var(--white);
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;
   color: var(--txtChange);
   font-family: "Audiowide";
   font-size: 0.8em;
-  font-weight: 900;
+  font-weight: 600;
   text-align: center;
   text-decoration: none;
   letter-spacing: 2px;
@@ -363,13 +363,13 @@ footer span {
 }
 .pageNav .pageNav-list .pageNav-listItem:hover {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  background-color: var(--txtChange);
   box-shadow: none;
   font-weight: 900;
 }
 .pageNav .pageNav-list a:hover {
-  color: var(--secondaryClr);
-  text-shadow: 0px 0px 2px var(--darkModeTxtClr);
+  background-color: var(--secondaryClr);
+  color: var(--secondaryTxt);
+  text-shadow: 0px 0px 2px var(--darkModeBg);
 }
 .pageNav .pageNav-list a:active {
   width: 100%;
@@ -574,6 +574,17 @@ footer span {
   background-position: top;
 }
 
+.landingImg {
+  display: block;
+  margin: 1.5em auto;
+  opacity: 0.8;
+  width: calc(11vw + 11em);
+  border-radius: 0.25em;
+}
+
+.welcome {
+  min-height: 350px;
+}
 .welcome p {
   padding: 3em;
   line-height: 1.4;
@@ -597,7 +608,7 @@ footer span {
 }
 
 .title {
-  padding-top: 0.25em;
+  padding-top: 1.5em;
   width: 100%;
   background-size: cover;
   background-position: top;
@@ -605,8 +616,8 @@ footer span {
   text-shadow: 0px 0px 7px var(--darkModeBg);
   color: var(--txtChange);
   font-weight: 900;
-  font-size: 3em;
-  font-family: "The Nautigal";
+  font-size: 1.75em;
+  font-family: "Audiowide";
   letter-spacing: 2px;
 }
 
@@ -709,9 +720,9 @@ footer span {
 }
 @media screen and (min-width: 1024px) {
   .landing .title {
-    font-size: 4.5em;
+    padding-top: 0.5em;
+    font-size: 3.25em;
   }
-
   .greeting {
     font-size: 1.2em;
   }
@@ -3396,37 +3407,25 @@ label:active:after {
 
 #topBtn {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Fixed/sticky position */
-  bottom: 20px;
-  /* Place the button at the bottom of the page */
-  right: 10px;
-  /* Place the button 30px from the right */
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
   width: 50px;
   height: 50px;
-  z-index: 99;
-  /* Make sure it does not overlap */
-  border: none;
-  /* Remove borders */
-  outline: none;
-  /* Remove outline */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
   background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
   /* Set a background color */
-  color: var(--secondaryTxt);
-  /* Text color */
-  cursor: pointer;
-  /* Add a mouse pointer on hover */
-  border-radius: 50%;
-  /* Rounded corners */
-  font-size: 18px;
-  /* Increase font size */
+  color: var(--secondaryTxt); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
 }
 
 #topBtn:hover {
-  background-color: var(--secondaryTxt);
-  /* Add a dark-grey background on hover */
+  background-color: var(--secondaryTxt); /* Add a dark-grey background on hover */
   color: var(--secondaryClr);
 }
 
@@ -3449,7 +3448,6 @@ label:active:after {
   .tripleMonitors h2:nth-last-child(1) {
     text-align: right;
   }
-
   .skills h1 {
     font-size: calc(1.5vw + 2rem);
   }
