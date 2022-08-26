@@ -736,38 +736,22 @@ footer span {
   min-height: 350px;
   border-top: 3px solid var(--themeBdr);
 }
-.chapter__header__body {
-  width: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: space-evenly;
-  padding-top: 2em;
-}
-.chapter__header__body article {
-  opacity: 0.85;
-  width: 500px;
+.chapter__header {
+  width: 800px;
   max-width: 80%;
   margin: auto;
-  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 1em;
+  font-weight: 400;
   letter-spacing: 2px;
   line-height: 1.4;
   color: Var(--black);
-  background-image: url("../dist/img/backgrounds/clouds-72634.jpg");
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  border-radius: 0.5rem;
 }
-.chapter__header__body article p {
+.chapter__header p {
   padding: 0.5em 0.25em;
-}
-.chapter__header__body article span {
-  font-family: "Audiowide";
-  padding: 1em;
-  color: var(--secondaryClr);
-  font-size: 18px;
 }
 
 .project {

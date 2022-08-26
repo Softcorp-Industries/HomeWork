@@ -1,9 +1,9 @@
 //alert('fuck you');
 function enableShowProjectsBtn(e) {
-  e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling.classList.add('showProject');
+  e.target.parentElement.parentElement.nextElementSibling.classList.add('showProject');
 }
 function disableShowProjectsBtn(e) {
-  e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling.classList.remove('showProject');
+  e.target.parentElement.parentElement.nextElementSibling.classList.remove('showProject');
 }
 //  Projects Button
 const buttonShow = document.getElementById('buttonShow');
