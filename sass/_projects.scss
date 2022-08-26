@@ -9,43 +9,21 @@
   border-top: 3px solid var(--themeBdr);
   // Chapter Header is visable at all times
   &__header {
-    
-    &__body {
-      width: 100%;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      justify-content: space-evenly;
-      padding-top: 2em;
-      //background-color: var(--bgFilter);
-      article {
-        opacity: .85;
-        width: 500px;
-        max-width: 80%;
-        margin: auto;
-        //border: 1px solid yellow;
-        padding: 0.5rem;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        line-height: 1.4;
-        color: Var(--black);
-        background-image: url("../dist/img/backgrounds/clouds-72634.jpg");
-        //background-color: var(--bgFilterBlkDrk);
-        box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6),
-    inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-        border-radius: 0.5rem;
-        p {
-          padding: .5em .25em;
-        }
-        span {
-          font-family: "Audiowide";
-          padding: 1em;
-          color: var(--secondaryClr);
-          font-size: 18px;
-        }
-      }
+    width: 800px;
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    color: Var(--black);
+    p {
+      padding: 0.5em 0.25em;
     }
   }
 }
@@ -69,7 +47,7 @@
       font-size: calc(2vw + 2em);
       font-family: "Audiowide";
       font-weight: 700;
-      margin-bottom: .25em;
+      margin-bottom: 0.25em;
     }
     &__credit {
       text-align: center;
@@ -103,7 +81,7 @@
         color: Var(--black);
         background-color: var(--bgFilterTheme);
         border-radius: 0.5rem;
-        h3{
+        h3 {
           color: orangered;
         }
         span {
@@ -174,7 +152,7 @@
     .projectBox {
       // All code for the Project will inside the Project Box
       margin: auto;
-background-color: var(--inputToggleThemeFilter);
+      background-color: var(--inputToggleThemeFilter);
       .tributeBox {
         margin: auto;
         padding: 0.5rem;
@@ -220,7 +198,6 @@ background-color: var(--inputToggleThemeFilter);
         padding-bottom: 15px;
       }
     }
-    
   }
 }
 
@@ -231,7 +208,6 @@ background-color: var(--inputToggleThemeFilter);
       &__body {
         padding-bottom: 15px;
       }
-
     }
     .rating {
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
