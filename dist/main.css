@@ -593,20 +593,6 @@ footer span {
   letter-spacing: 2px;
 }
 
-.featureHeader {
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  text-align: center;
-  margin: auto;
-  margin-top: 2em;
-  padding: 1em 0;
-  width: 95%;
-  max-width: 600px;
-  border-radius: 1rem;
-  background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
-  background-size: cover;
-  background-color: var(--themeBlk);
-  margin-bottom: 50px;
-}
 .featureHeader .author {
   font-family: "The Nautigal";
   color: var(--white);
@@ -628,6 +614,20 @@ footer span {
   min-height: 350px;
   border-top: 3px solid var(--themeBdr);
 }
+.chapter__header {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+  text-align: center;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em 0;
+  width: 95%;
+  max-width: 600px;
+  border-radius: 1rem;
+  background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
+  background-size: cover;
+  background-color: var(--themeBlk);
+  margin-bottom: 2em;
+}
 .chapter__summary {
   width: 700px;
   max-width: 80%;
@@ -637,7 +637,7 @@ footer span {
   justify-content: space-evenly;
 }
 .chapter__summary p {
-  padding: 0.5em 0.25em;
+  padding: 0.25em;
   font-size: 0.9em;
   line-height: 1.3;
   letter-spacing: 2px;
@@ -648,20 +648,20 @@ footer span {
   font-weight: 600;
 }
 
-.project {
+.projects {
   max-width: 1200px;
   margin: auto;
   width: 95%;
   border: none;
   padding: 1rem;
 }
+
 .project__header__title {
   margin-top: 1.5em;
   text-align: center;
   letter-spacing: 2px;
   color: var(--txtChange);
-  font-size: calc(2vw + 2em);
-  font-family: "Audiowide";
+  font-size: calc(1.5vw + 1em);
   font-weight: 700;
   margin-bottom: 0.25em;
 }
