@@ -1,59 +1,7 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-.landing {
-  //padding-top: 1em;
-  //background-image: url("img/tech_img/mwesigwa-joel-1500.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top;
-}
-.landingImg {
-  display: block;
-  margin: 1.5em auto;
-  opacity: 0.8;
-  width: calc(11vw + 11em);
-  border-radius: 0.25em;
-}
-.welcome {
-  min-height: 350px;
-  p {
-    padding: 3em;
-    line-height: 1.4;
-    font-size: 0.8em;
-    font-weight: 600;
-    letter-spacing: 1px;
-    //text-shadow: 0px 0px 3px black;
-    span {
-      font-size: 1.75em;
-      color: var(--txtChange);
-      text-shadow: 0px 0px 5px var(--darkModeBg);
-      font-family: "Audiowide";
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
-  }
-  &__header {
-    color: var(--darkModeTxtClr);
-    margin: auto;
-    width: 95%;
-    max-width: 800px;
-  }
-}
-.title {
-  padding-top: 1.5em;
-  width: 100%;
-  background-size: cover;
-  background-position: top;
-  text-align: center;
-  text-shadow: 0px 0px 7px var(--darkModeBg);
-  color: var(--txtChange);
-  font-weight: 900;
-  font-size: 1.75em;
-  font-family: "Audiowide";
-  letter-spacing: 2px;
-}
+
 .banner {
   &__top {
     z-index: 1;
@@ -130,16 +78,7 @@
     }
   }
 }
-.greeting {
-  width: 100%;
-  padding: 1em 0;
-  text-align: center;
-  font-size: 1em;
-  font-family: "Audiowide";
-  color: var(--txtChange);
-  text-shadow: 0px 0px 3px var(--darkModeBg);
-  letter-spacing: 2px;
-}
+
 
 @media screen and (min-width: 310px) {
 }
@@ -168,15 +107,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .landing {
-    .title {
-      padding-top: 0.5em;
-      font-size: 3.25em;
-    }
-  }
-  .greeting {
-    font-size: 1.2em;
-  }
+  
 }
 .banner {
   &__top {

@@ -82,28 +82,30 @@
 }
 .showBtn {
   margin: 15px auto;
-  width: calc(7.5vw + 8rem);
+  //width: calc(7.5vw + 8em);
+  min-height: 1.5em;
   background: none;
   //background-color: var(--bgPrimary);
   //border: 2px solid var(--black);
-  border-radius: 1rem;
+  border-radius: 1em;
   button {
     @include darkMode;
     cursor: pointer;
+    padding: 1em 2em;
     outline: none;
     border: none;
     display: block;
     width: 100%;
-    padding: 0.4rem 0.5rem;
+    height: 100%;
     font-family: "Audiowide";
-    font-size: 14px;
+    font-size: .8em;
     font-weight: 600;
     color: var(--secondaryClr);
     text-align: center;
     text-decoration: none;
     letter-spacing: 0.25rem;
     background-color: whitesmoke;
-    border-radius: 1rem;
+    border-radius: 1em;
   }
   button:hover{
     background-color: var(--secondaryClr);
