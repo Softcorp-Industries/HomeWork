@@ -199,12 +199,12 @@ function showImgGalleryProject() {
   })
 }
 function showImgSliderProject() {
-  imgSliderShowBtn.addEventListener('click', () => {
+  imgSliderShowBtn.addEventListener('click', (e) => {
     if (!imgSliderShowOpen) {
-      enableShowProjectBtn();
+      enableShowProjectBtn(e);
       imgSliderShowOpen = true;
     } else {
-      disableShowProjectBtn();
+      disableShowProjectBtn(e);
       imgSliderShowOpen = false;
     }
   })

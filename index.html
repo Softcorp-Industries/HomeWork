@@ -8,9 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Roboto:ital,wght@0,500;0,700;0,900;1,300&family=The+Nautigal:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Roboto:ital,wght@0,500;0,700;0,900;1,300&family=The+Nautigal:wght@400;700&display=swap"
+        rel="stylesheet" />
     <link rel="shortcut icon" type="image/png" href="img/favicon2.jpg" />
     <title>Home Work</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
@@ -18,7 +17,7 @@
 </head>
 
 <body data-toggleMode="" data-darkMode='light' data-toggleTheme='light'>
-    <header class="landing">
+    <header class="mainHeader">
         <section id="darkModeLanding">
             <div id="darkMode" class="darkMode">
                 <button id="darkModeBtn" class="dmToggle"></button>
@@ -30,9 +29,12 @@
             </div>
             <nav class="pageNav" aria-label="pageNav">
                 <ul id="pageNav-list" class="pageNav-list">
-                    <li class="pageNav-listItem"><a href="https://softcorpindustries.tech/index.html" target="_blank">Home</a></li>
-                    <li class="pageNav-listItem"><a href="https://softcorpindustries.tech/about.html" target="_blank">About</a></li>
-                    <li class="pageNav-listItem"><a href="https://softcorpindustries.tech/about.html#contact" target="_blank">Contact</a></li>
+                    <li class="pageNav-listItem"><a href="https://softcorpindustries.tech/index.html"
+                            target="_blank">Home</a></li>
+                    <li class="pageNav-listItem"><a href="https://softcorpindustries.tech/about.html"
+                            target="_blank">About</a></li>
+                    <li class="pageNav-listItem"><a href="https://softcorpindustries.tech/about.html#contact"
+                            target="_blank">Contact</a></li>
                     <p class="cHeader">Chapters</p>
                     <li class="pageNav-listItem"><a href="#buttonProjects">Buttons</a></li>
                     <li class="pageNav-listItem"><a href="#imgProjects">Images</a></li>
@@ -42,24 +44,17 @@
                     <li class="pageNav-listItem"><a href="#uiProjects">Custom UI</a></li>
                 </ul>
             </nav>
-            <article class="top">
+            <section class="landing">
                 <h1 class="title">"Softcorp Industries"</h1>
                 <p id="greeting" class="greeting">Welcome</p>
-                <img
-          class="landingImg"
-          src="./img/education/mwesigwa-joel-1500.jpg"
-          width="250"
-          alt=""
-        />
-            </article>
+                <img class="landingImg" src="./img/education/mwesigwa-joel-1500.jpg" width="250" alt="" />
+            </section>
             <section class="welcome">
-            <article class="welcome__header">
-                <p>
+                <p class="welcome__header">
                     Welcome to the <span>"Home Work"</span> web site, the second of three
                     web sites that I'm building on my path to becoming a Front-End Web
                     Developer. I've created this page to display small projects and skills that I'm learning.
                 </p>
-            </article>
             </section>
         </section>
     </header>
@@ -87,18 +82,23 @@
                     <header class="featureHeader">
                         <h2>Buttons</h2>
                     </header>
-                    <header class="chapter__header">
-                        <p>Buttons are everywhere from, "button" & "div" elements or an "input". They can
-                            function differntly but styled to look the same</p>
+                    <header class="chapter__summary">
+                        <p>
+                            The <span>&ltbutton&gt</span> tag is the most basic element used for a button. We can also
+                            create a clickable
+                            button out of almost any element using a little bit of javaScript. <span>&ltinput&gt</span>
+                            and <span>&ltdiv&gt</span>
+                            tags are very common elements to create dynamic buttons.
+                        </p>
                         <div class="showBtn">
-                            <button id="buttonShow">Show</button>
+                            <button id="buttonShow">Show Projects</button>
                         </div>
-                        
                     </header>
                     <section class="project" id="buttonProject">
+
                         <header class="project__header">
-                                <p class="project__header__title">Toggle Buttons</p>
-                                <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
+                            <p class="project__header__title">Toggle Buttons</p>
+                            <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
                             <section class="project__header__body">
                                 <article>
                                     <h3>Synopsis:</h3>
@@ -187,9 +187,9 @@
                         </section>
 
                         <header class="project__header">
-                                <p class="project__header__title">Toggle Input</p>
-                                <p class="project__header__credit">Inspired by: <span>Design Course</span></p>
-                                <section class="project__header__body">
+                            <p class="project__header__title">Toggle Input</p>
+                            <p class="project__header__credit">Inspired by: <span>Design Course</span></p>
+                            <section class="project__header__body">
                                 <article>
                                     <h3>Synopsis:</h3>
                                     <p>These Toggle's are created with "<span>input</span>" elements. They also use
@@ -241,8 +241,8 @@
                         </section>
 
                         <header class="project__header">
-                                <p class="project__header__title">5 Burger Menu</p>
-                                <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
+                            <p class="project__header__title">5 Burger Menu</p>
+                            <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
                             <section class="project__header__body">
                                 <article>
                                     <span>Synopsis:</span>
@@ -286,26 +286,22 @@
                                         </div>
                                     </section>
                                     <section class="card-container" id="Cheese_Burger">
-                                        <div>
-                                            <div class="menuCard">
-                                                <h1>Cheese Burger</h1>
-                                                <div class="btn" id="menu2-btn" onclick="menuClick()">
-                                                    <div class="line lineTop"></div>
-                                                    <div class="line lineCenter"></div>
-                                                    <div class="line lineBottom"></div>
-                                                </div>
+                                        <div class="menuCard">
+                                            <h1>Cheese Burger</h1>
+                                            <div class="btn" id="menu2-btn" onclick="menuClick()">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
                                             </div>
                                         </div>
                                     </section>
                                     <section class="card-container" id="Double_Burger">
-                                        <div>
-                                            <div class="menuCard">
-                                                <h1>Double Burger</h1>
-                                                <div class="btn" id="menu3-btn" onclick="menuClick()">
-                                                    <div class="line lineTop"></div>
-                                                    <div class="line lineCenter"></div>
-                                                    <div class="line lineBottom"></div>
-                                                </div>
+                                        <div class="menuCard">
+                                            <h1>Double Burger</h1>
+                                            <div class="btn" id="menu3-btn" onclick="menuClick()">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
                                             </div>
                                         </div>
                                     </section>
@@ -320,14 +316,12 @@
                                         </div>
                                     </section>
                                     <section class="card-container" id="Triple_Burger">
-                                        <div>
-                                            <div class="menuCard">
-                                                <h1>Triple Burger</h1>
-                                                <div class="btn" id="menu4-btn">
-                                                    <div class="line lineTop"></div>
-                                                    <div class="line lineCenter"></div>
-                                                    <div class="line lineBottom"></div>
-                                                </div>
+                                        <div class="menuCard">
+                                            <h1>Triple Burger</h1>
+                                            <div class="btn" id="menu4-btn">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
                                             </div>
                                         </div>
                                     </section>
@@ -342,14 +336,13 @@
                         </section>
 
                         <header class="project__header">
-                                <p class="project__header__title">"Click Events"</p>
-                                <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
+                            <p class="project__header__title">"Click Events"</p>
+                            <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
                             <section class="project__header__body">
-                                <article>
-                                    <span>Synopsis:</span>
-                                    <p>This Button section groups all the buttons with one attribute. DOM manipulation
-                                        is then used to display any actions from the "event".</p>
-                                </article>
+                                <p>
+                                    This Button section groups all the buttons with one attribute. DOM manipulation
+                                    is then used to display any actions from the "event".
+                                </p>
                                 <div class="showBtn">
                                     <button id="oneBtn">Show</button>
                                 </div>
@@ -383,7 +376,7 @@
                                                 All
                                             </p>
                                             <div>&lt button
-                                                <span>class </span><span>=</span><span> "btn"</span></span>
+                                                <span>class </span><span>=</span><span> "btn"</span>
                                                 &gt
                                             </div>
                                         </div>
@@ -601,8 +594,8 @@
                                 </a>
                             </div>
                         </section>
-
                     </section>
+
                     <div class="spacer"></div>
                 </div>
             </section>
@@ -612,18 +605,18 @@
                     <header class="featureHeader">
                         <h2>Images</h2>
                     </header>
-                    <header class="chapter__header">
+                    <header class="chapter__summary">
                         <p>Displaying images on the web is a big part of the UX & a great business tool.</p>
                         <div class="showBtn">
-                            <button id="imgShow">Show</button>
+                            <button id="imgShow">Show Projects</button>
                         </div>
                     </header>
                     <section class="project" id="imgProject">
                         <header class="project__header">
-                            
-                                <p class="project__header__title">Image Carousel</p>
-                                <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
-                            
+
+                            <p class="project__header__title">Image Carousel</p>
+                            <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
+
                             <section class="project__header__body">
                                 <article>
                                     <span>Synopsis:</span>
@@ -729,10 +722,8 @@
                         </section>
 
                         <header class="project__header">
-                            
-                                <p class="project__header__title">Product Gallery</p>
-                                <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
-                            
+                            <p class="project__header__title">Product Gallery</p>
+                            <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
                             <section class="project__header__body">
                                 <article>
                                     <span>Synopsis:</span>
@@ -790,7 +781,7 @@
                                 <h5><span>Web Site:</span> Softcorp Industries</h5>
                             </div>
                         </section>
-                        
+
                         <header class="project__header">
                             <article>
                                 <p class="project__header__title">Image Gallery</p>
@@ -856,10 +847,10 @@
                                 <h5><span>Web Site:</span> Softcorp Industries</h5>
                             </div>
                         </section>
-                        
+
                         <header class="project__header">
-                                <p class="project__header__title">Image Slider</p>
-                                <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
+                            <p class="project__header__title">Image Slider</p>
+                            <p class="project__header__credit">Design by: <span>Softcorp Industries</span></p>
                             <section class="project__header__body">
                                 <article>
                                     <p>
@@ -869,10 +860,10 @@
                                         elements
                                         and
                                         use differnt effects for each</p>
-                                    </article>
-                                    <div class="showBtn">
-                                        <button id="imgSliderShow">Show</button>
-                                    </div>
+                                </article>
+                                <div class="showBtn">
+                                    <button id="imgSliderShow">Show</button>
+                                </div>
                             </section>
                         </header>
                         <section class="project__container" id="imgSlider">
@@ -982,17 +973,17 @@
                     <header class="featureHeader">
                         <h2>Animations</h2>
                     </header>
-                    <header class="chapter__header">
-                    <p>Animations can be done various ways. I tried to give some examples of the different
-                        kinds of movement & the properties that can be used.</p>
-                    <div class="showBtn">
-                        <button id="animationProjectBtn">Show</button>
-                    </div>
+                    <header class="chapter__summary">
+                        <p>Animations can be done various ways. I tried to give some examples of the different
+                            kinds of movement & the properties that can be used.</p>
+                        <div class="showBtn">
+                            <button id="animationProjectBtn">Show Projects</button>
+                        </div>
                     </header>
                     <section class="project" id="animationProject">
                         <header class="project__header">
-                                <p class="project__header__title">On Hover</p>
-                                <p class="project__header__credit">Inspired by: <span>Kyle at Web Dev Simplified</span></p>
+                            <p class="project__header__title">On Hover</p>
+                            <p class="project__header__credit">Inspired by: <span>Kyle at Web Dev Simplified</span></p>
                             <section class="project__header__body">
                                 <article>
                                     <span>Synopsis:</span>
@@ -1064,8 +1055,8 @@
                         </section>
 
                         <header class="project__header">
-                                <p class="project__header__title">On Hover</p>
-                                <p class="project__header__credit"><span>Inspired by:</span> the Net Ninja</p>
+                            <p class="project__header__title">On Hover</p>
+                            <p class="project__header__credit"><span>Inspired by:</span> the Net Ninja</p>
                             <section class="project__header__body">
                                 <article>
                                     <span>Synopsis:</span>
@@ -1129,10 +1120,10 @@
                                 <h5><span>Web Site:</span> Softcorp Industries</h5>
                             </div>
                         </section>
-                        
+
                         <header class="project__header">
-                                <p class="project__header__title">On Hover</p>
-                                <p class="project__header__credit"><span>Inspired by:</span> Dev-Tips</p>
+                            <p class="project__header__title">On Hover</p>
+                            <p class="project__header__credit"><span>Inspired by:</span> Dev-Tips</p>
                             <section class="project__header__body">
                                 <article>
                                     <span>Synopsis:</span>
@@ -1226,10 +1217,10 @@
                                 <h5><span>Web Site:</span> Softcorp Industries</h5>
                             </div>
                         </section>
-                        
+
                         <header class="project__header">
-                                <h4 class="project__header__title">Canvas</h4>
-                                <h5 class="project__header__credit"><span>Design by:</span> Softcorp Industries</h5>
+                            <h4 class="project__header__title">Canvas</h4>
+                            <h5 class="project__header__credit"><span>Design by:</span> Softcorp Industries</h5>
                             <section class="project__header__body">
                                 <article>
                                     <span>Synopsis:</span>
@@ -1319,16 +1310,17 @@
                     <header class="featureHeader">
                         <h2>Storage</h2>
                     </header>
-                    <header class="chapter__header">
+                    <header class="chapter__summary">
                         <p>Local Storage projects</p>
                         <div class="showBtn">
-                            <button id="storageProjectBtn">Show</button>
+                            <button id="storageProjectBtn">Show Projects</button>
                         </div>
                     </header>
                     <section class="project" id="storageProject">
                         <header class="project__header">
-                                <p class="project__header__title">ToDo List 1</p>
-                                <p class="project__header__credit">Design by: <span>Kyle at Web Dev Simplified & Kevin Powell</span></p>
+                            <p class="project__header__title">ToDo List 1</p>
+                            <p class="project__header__credit">Design by: <span>Kyle at Web Dev Simplified & Kevin
+                                    Powell</span></p>
                             <section class="project__header__body">
                                 <article>
                                     <span>Synopsis:</span>
@@ -1437,13 +1429,13 @@
                     <header class="featureHeader">
                         <h2>Web Players</h2>
                     </header>
-                    <section class="chapter__header">
+                    <section class="chapter__summary">
                         <p>The primary goal was to design toggle buttons with 'input' and 'div'
                             elements
                             and
                             use differnt effects for each</p>
                         <div class="showBtn">
-                            <button id="webPlayerProjectBtn">Show</button>
+                            <button id="webPlayerProjectBtn">Show Projects</button>
                         </div>
                     </section>
                     <section class="project" id="webPlayerProject">
@@ -1505,7 +1497,7 @@
                                 <h5><span>Web Site:</span> Softcorp Industries</h5>
                             </div>
                         </section>
-                        
+
                         <header class="project__header">
                             <p class="project__header__title">Audio Player V2</p>
                             <p class="project__header__credit">Design by: Softcorp Industries</p>
@@ -1568,7 +1560,7 @@
                                 <h5><span>Web Site:</span> Softcorp Industries</h5>
                             </div>
                         </section>
-                        
+
                         <header class="project__header">
                             <p class="project__header__title">Audio Track Library V1</p>
                             <p class="project__header_credit">inspired by Adam Khoury</p>
@@ -1616,7 +1608,7 @@
                                 <h5><span>Web Site:</span> Softcorp Industries</h5>
                             </div>
                         </section>
-                        
+
                         <header class="project__header">
                             <p class="project__header__title">Custom Video Player</p>
                             <p class="project__header__credit">Video</p>
@@ -1666,32 +1658,26 @@
                     <div class="spacer"></div>
                 </div>
             </section>
-            <hr>            
+            <hr>
             <section class="uiProjects" id="uiProjects">
                 <div class="chapter" id="darkModeUI">
                     <header class="featureHeader">
                         <h2>Custom UI</h2>
                     </header>
-                    <header class="chapter__header">
-                        <section class="chapter__header__body">
-                            <article>
-                                <p>
-                                    <span>Synopsis:</span>
-                                </p>
-                                <p>The primary goal was to design toggle buttons with 'input' and 'div'
-                                    elements
-                                    and
-                                    use differnt effects for each</p>
-                                <div class="showBtn">
-                                    <button id="uiProjectBtn">Show</button>
-                                </div>
-                            </article>
-                        </section>
+                    <header class="chapter__summary">
+                        <p>The primary goal was to design toggle buttons with 'input' and 'div'
+                            elements
+                            and
+                            use differnt effects for each</p>
+                        <div class="showBtn">
+                            <button id="uiProjectBtn">Show</button>
+                        </div>
                     </header>
                     <section class="project" id="uiProject">
                         <header class="project__header">
                             <p class="project__header__title">Tablet V1</p>
-                            <p class="project__header__credit">Design by: <span>Kyle at Web Dev Simplified & Kevin Powell</span></p>
+                            <p class="project__header__credit">Design by: <span>Kyle at Web Dev Simplified & Kevin
+                                    Powell</span></p>
                             <div class="project__header__body">
                                 <article>
                                     <span>Synopsis:</span>

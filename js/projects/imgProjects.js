@@ -284,8 +284,8 @@ buttonRight.addEventListener("click", function () {
 
 
 
-/*
 
+/*
 
 // Show Slider
 const imgSlider = document.querySelector(".imgSliderShow");
@@ -318,6 +318,7 @@ showGallery.addEventListener("click", () => {
     galleryShow = false;
   }
 });
+
 
 // Show Product Gallery
 const productGallery = document.querySelector(".imgProductGalleryShow");
