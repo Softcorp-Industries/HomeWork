@@ -34,6 +34,7 @@
   --black: black;
   --white: white;
   
+  --toggleTheme: #bebebeb;
   --inputToggleThemeFilter: rgba(255, 255, 255, 0.2);
   --inputToggleTheme: #c7c7c7;
   --inputToggleTxt: rgb(54, 54, 54);
@@ -64,7 +65,7 @@ body[data-darkMode="darkMode"] {
 
   --darkModeBgblk: rgb(0, 0, 0); // from
   --darkModeTxtClr: white; // from rgb(54, 54, 54)
-  --darkModeClrlgt: rgb(54, 54, 54); // from
+  --darkModeTxtlgt: rgb(54, 54, 54); // from
   --themeTxtClr: white; // from
   --themeBlk: rgb(99, 99, 99); // from whitesmoke
   --themeBg: black;
@@ -115,7 +116,7 @@ body[data-theme="yellow"] {
 }
 */
 body[data-toggleMode="default"] {
-  --toggleTheme: #e3e3e3;
+  --toggleTheme: #bebebe;
 }
 body[data-toggleMode="htmlTheme"] {
   --toggleTheme: rgb(255, 69, 0);

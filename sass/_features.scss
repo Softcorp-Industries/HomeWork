@@ -82,7 +82,7 @@
 }
 .showBtn {
   margin: 15px auto;
-  //width: calc(7.5vw + 8em);
+  max-width: 700px;
   min-height: 1.5em;
   background: none;
   //background-color: var(--bgPrimary);

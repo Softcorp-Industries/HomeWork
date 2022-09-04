@@ -114,26 +114,36 @@
             <article class="siteSummary">
               <p>
                 Anyone who has gone down the Self-Taught route knows you build a
-                lot of projects on that path. I started making my own Templates
-                with a custom <span class="operator">&ltheader&gt</span> &
-                <span class="operator">&ltfooter&gt</span>. I then put whatever
-                project I'm working on in a
-                <span class="operator">&ltmain</span> <span class="attribute">class</span>=<span class="string">"newProject"</span><span class="operator">&gt</span> tag.
+                lot of projects on that path. After awhile I started making my
+                own templates for my projects with a
+                <span class="operator">&ltheader&gt</span> &
+                <span class="operator">&ltfooter&gt</span> for myself. I then
+                put whatever project I'm working on in the
+                <span class="operator">&ltmain&gt</span> tag.
               </p>
               <p>
                 The next challenge I gave myself was to create the templates
-                using the DOM. So now my project templates were being created using
-                the DOM and not hard coded into the HTML.
+                using the DOM. So now my project templates were being created
+                using the DOM and not hard coded into the HTML.
               </p>
               <p>
-                In the end I ended up with a lot of different little projects. The next challenge was to make an environment to display all of my projects on one Web Site. So I created the <span style="color:var(--txtChange);font-weight: 600;">"Home Work"</span> web site to display the small projects and skills that
-                I'm learning.
+                In the end I ended up with a lot of different little projects.
+                The next challenge was to make an environment to display all of
+                my projects on one Web Site. So I created the
+                <span style="color: var(--txtChange); font-weight: 600"
+                  >"Home Work"</span
+                >
+                web site to display the small projects and skills that I'm
+                learning.
               </p>
               <p>
-                I divided the page into chapters that contain similar concepts but have different learning levels included.
+                I divided the page into chapters that contain similar concepts,
+                they also have different experience levels and skills included.
               </p>
               <p>
-                I hope you enjoy and find something that interests you. This site is part of my learning experience and I do not use it for profit.
+                I hope you enjoy and find something that interests you. This
+                site is part of my learning experience and I do not use it for
+                profit.
               </p>
             </article>
             <header class="chapter__header">
@@ -142,13 +152,17 @@
             <div class="chapter__summary">
               <p>
                 The <span>&ltbutton&gt</span> tag is the most basic element used
-                to create a clickable button. We can also create a clickable button with
-                almost any element using a little bit of javaScript. The
-                <span>&ltinput&gt</span> and <span>&ltdiv&gt</span>
-                tags are very common elements to create clickable buttons as well.
+                to create a clickable button. We can also create a clickable
+                button with almost any element using a little bit of javaScript.
+                The <span>&ltinput&gt</span> and <span>&ltdiv&gt</span>
+                tags are very common elements to create clickable buttons as
+                well.
               </p>
               <p>
-                These projects show the different elements that can be used to create a button. I also incorporated some javaScript local storage and <span class="operator">@keyframes</span> for the animation.
+                These projects show the different elements that can be used to
+                create a button. I also incorporated some javaScript local
+                storage and <span class="operator">@keyframes</span> for the
+                animation.
               </p>
               <div class="showBtn">
                 <button id="buttonShow">Show Projects</button>
@@ -160,19 +174,23 @@
                   <p class="project__header__title">
                     <span class="operator">&ltbutton&gt</span>
                   </p>
-                  <p class="project__header__credit">
-                    Design by: <span>Softcorp Industries</span>
-                  </p>
+
                   <section class="project__header__body">
                     <article>
-                      <h3>Synopsis:</h3>
+                      <p class="project-synopsis">Synopsis:</p>
                       <p>
-                        These Toggle's are created with '<span>button</span>'
-                        elements. They also use Local Storage.
+                        I created 5 <span class="operator">&ltbutton&gt</span>
+                        elements that changes the theme color on all the project
+                        boxes. The button's use local storage to save the theme
+                        color and the button's position, I added a conditional so that only one toggle
+                        is active at any one time.
+                      </p>
+                      <p class="project-credit">
+                        Design by: <span>Softcorp Industries</span>
                       </p>
                     </article>
                     <div class="showBtn">
-                      <button id="toggleButtonBtn">Show</button>
+                      <button id="toggleButtonBtn">Show Project</button>
                     </div>
                   </section>
                 </header>
@@ -213,14 +231,6 @@
                   </div>
                   <section class="wrapper">
                     <div class="projectBox toggleBtns">
-                      <div class="toggle-container">
-                        <h4 class="defaultToggleHeader">Toggle Summary</h4>
-                        <article class="toggleSummary">
-                          This toggle section uses the local storage to save the
-                          color and the toggle position. It's also programmed so
-                          only one toggle is active at any one time.
-                        </article>
-                      </div>
                       <div class="toggle-container">
                         <h4 class="defaultToggleHeader">Default Theme</h4>
                         <div class="btn-container">

@@ -70,7 +70,7 @@
     color: var(--darkModeTxtClr);
     margin: 1em auto;
     width: 95%;
-    max-width: 1000px;
+    max-width: 900px;
     span {
       text-shadow: 0px 0px 3px var(--darkModeBg);
       font-weight: 400;
@@ -110,7 +110,7 @@
     letter-spacing: 4px;
   }
   &__summary {
-    width: 700px;
+    width: 800px;
     max-width: 80%;
     margin: auto;
     display: flex;
@@ -133,14 +133,14 @@
 }
 // Sections are visable when the Show Button is clicked
 .projects {
-  max-width: 1200px;
-  margin: auto;
-  width: 95%;
+  width: 100%;
   border: none;
   padding: 1rem;
+  text-align: center;
 }
 
 .project {
+  width: 100%;
   &__header {
     &__title {
       margin-top: 1.5em;
@@ -154,7 +154,8 @@
       font-weight: 700;
       margin-bottom: 0.25em;
     }
-    &__credit {
+    .project-credit {
+      margin-top: 2em;
       text-align: center;
       font-size: 12px;
       margin-bottom: 2em;
@@ -167,31 +168,30 @@
       }
     }
     &__body {
-      width: 95%;
+      width: 100%;
       margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      justify-content: space-evenly;
+      
       padding-top: 15px;
       //background-color: var(--bgFilter);
       margin-bottom: 3em;
       article {
-        width: 275px;
+        width: 100%;
+        max-width: 700px;
         margin: auto;
-        border: 1px solid var(--black);
+        text-align: left;
+        //border: 1px solid var(--black);
         padding: 0.25rem;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        color: Var(--black);
+        font-size: .9em;
+        letter-spacing: 1px;
+        color: var(--darkModeTxtClr);
         background-color: var(--bgFilterTheme);
         border-radius: 0.5rem;
-        h3 {
-          color: orangered;
+        .project-synopsis {
+          color: var(--txtChange);
+          font-weight: 600;
+          margin-bottom: .25em;
         }
         span {
-          color: orangered;
           font-weight: 900;
           //text-shadow: 0px 0px 4px var(--black);
         }
@@ -203,12 +203,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
-    background-color: var(--bgFilterBlkDrk);
+    max-width: 700px;
+    background-color: var(--darkModeTxtlgt);
     margin: auto;
-    border-radius: 0 0 0.5rem 0.5rem;
+    border-radius: 0 0 0.5em 0.5em;
     padding: 0.25rem 0.15rem;
-
+    border: 3px solid var(--toggleTheme);
     a {
       text-decoration: none;
     }
@@ -226,12 +226,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
     gap: 5px;
-    max-width: 95%;
+    max-width: 700px;
     margin: auto;
     align-items: center;
     padding: 1em 0.5em;
-    background-color: var(--bgFilterBlkDrk);
-    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: var(--darkModeTxtlgt);
+    border: 3px solid var(--toggleTheme);
+    border-radius: .5em .5em 0 0;
     &__box {
       display: flex;
       align-items: center;
@@ -251,10 +252,12 @@
 
   .wrapper {
     // Wrapper contains the Project box
-    max-width: 95%;
+    max-width: 700px;
     margin: auto;
     background-color: var(--bgFilterDrk);
-
+    border: 3px solid var(--toggleTheme);
+    border-top: none;
+    border-bottom: none;
     .projectBox {
       // All code for the Project will inside the Project Box
       margin: auto;
