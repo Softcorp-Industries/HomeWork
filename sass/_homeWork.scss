@@ -111,7 +111,7 @@
   }
   &__summary {
     width: 800px;
-    max-width: 80%;
+    max-width: 90%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -141,6 +141,7 @@
 
 .project {
   width: 100%;
+  margin-bottom: 7em;
   &__header {
     &__title {
       margin-top: 1.5em;
@@ -149,21 +150,21 @@
       //background-color: var(--bgFilterDrk);
       letter-spacing: 2px;
       color: var(--txtChange);
-      font-size: calc(1.5vw + 1em);
+      font-size: 1.5em;
       //font-family: "Audiowide";
       font-weight: 700;
       margin-bottom: 0.25em;
     }
     .project-credit {
-      margin-top: 2em;
+      margin-top: 1em;
       text-align: center;
-      font-size: 12px;
+      font-size: .75em;
       margin-bottom: 2em;
       color: Var(--darkModeTxtClr);
       span {
         color: var(--txtChange);
         text-shadow: none;
-        font-size: 16px;
+        font-size: 1.25em;
         font-family: "Audiowide";
       }
     }
@@ -180,8 +181,8 @@
         margin: auto;
         text-align: left;
         //border: 1px solid var(--black);
-        padding: 0.25rem;
-        font-size: .9em;
+        //padding: 0.25rem;
+        font-size: .95em;
         letter-spacing: 1px;
         color: var(--darkModeTxtClr);
         background-color: var(--bgFilterTheme);
@@ -189,6 +190,8 @@
         .project-synopsis {
           color: var(--txtChange);
           font-weight: 600;
+          font-family: "Audiowide";
+          font-size: 1.25em;
           margin-bottom: .25em;
         }
         span {
@@ -224,28 +227,22 @@
   }
   .rating {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
-    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(2.5em, 1fr));
     max-width: 700px;
     margin: auto;
     align-items: center;
-    padding: 1em 0.5em;
+    padding: 0.5em;
     background-color: var(--darkModeTxtlgt);
     border: 3px solid var(--toggleTheme);
     border-radius: .5em .5em 0 0;
     &__box {
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      width: 145px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      //text-shadow: 0px 0px 1px var(--white);
-      font-size: 14px;
-      h5 {
-        font-size: 14px;
-        color: var(--white);
+      width: 2.5em;
+      img {
+        width: 100%;
       }
     }
   }
