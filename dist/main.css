@@ -593,22 +593,6 @@ footer span {
   letter-spacing: 2px;
 }
 
-.featureHeader .author {
-  font-family: "The Nautigal";
-  color: var(--white);
-  font-size: 2em;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-shadow: 0px 0px 3px var(--black);
-}
-.featureHeader h2 {
-  text-shadow: 0px 0px 5px var(--black);
-  font-size: 1.75em;
-  font-weight: 900;
-  color: var(--secondaryTxt);
-  letter-spacing: 4px;
-}
-
 .chapter {
   padding-top: 2em;
   min-height: 350px;
@@ -627,6 +611,13 @@ footer span {
   background-size: cover;
   background-color: var(--themeBlk);
   margin-bottom: 2em;
+}
+.chapter h2 {
+  text-shadow: 0px 0px 5px var(--black);
+  font-size: 1.75em;
+  font-weight: 900;
+  color: var(--secondaryTxt);
+  letter-spacing: 4px;
 }
 .chapter__summary {
   width: 700px;
@@ -3296,7 +3287,7 @@ label:active:after {
   max-width: 1000px;
   margin: auto;
 }
-.tripleMonitors h2 {
+.tripleMonitors p {
   color: var(--white);
   padding: 1em;
   text-align: center;
