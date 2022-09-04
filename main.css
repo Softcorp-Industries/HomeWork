@@ -23,6 +23,7 @@
   --bgFilterDrk: rgba(255, 255, 255, 0.8);
   --black: black;
   --white: white;
+  --toggleTheme: #bebebeb;
   --inputToggleThemeFilter: rgba(255, 255, 255, 0.2);
   --inputToggleTheme: #c7c7c7;
   --inputToggleTxt: rgb(54, 54, 54);
@@ -50,7 +51,7 @@ body[data-darkMode=darkMode] {
   --darkModeBtn: rgba(189, 189, 189, 0.4);
   --darkModeBgblk: rgb(0, 0, 0);
   --darkModeTxtClr: white;
-  --darkModeClrlgt: rgb(54, 54, 54);
+  --darkModeTxtlgt: rgb(54, 54, 54);
   --themeTxtClr: white;
   --themeBlk: rgb(99, 99, 99);
   --themeBg: black;
@@ -102,7 +103,7 @@ body[data-theme="yellow"] {
 }
 */
 body[data-toggleMode=default] {
-  --toggleTheme: #e3e3e3;
+  --toggleTheme: #bebebe;
 }
 
 body[data-toggleMode=htmlTheme] {
@@ -602,7 +603,7 @@ footer span {
   color: var(--darkModeTxtClr);
   margin: 1em auto;
   width: 95%;
-  max-width: 1000px;
+  max-width: 900px;
 }
 .siteSummary p span {
   text-shadow: 0px 0px 3px var(--darkModeBg);
@@ -636,7 +637,7 @@ footer span {
   letter-spacing: 4px;
 }
 .chapter__summary {
-  width: 700px;
+  width: 800px;
   max-width: 80%;
   margin: auto;
   display: flex;
@@ -655,13 +656,15 @@ footer span {
 }
 
 .projects {
-  max-width: 1200px;
-  margin: auto;
-  width: 95%;
+  width: 100%;
   border: none;
   padding: 1rem;
+  text-align: center;
 }
 
+.project {
+  width: 100%;
+}
 .project__header__title {
   margin-top: 1.5em;
   text-align: center;
@@ -671,45 +674,43 @@ footer span {
   font-weight: 700;
   margin-bottom: 0.25em;
 }
-.project__header__credit {
+.project__header .project-credit {
+  margin-top: 2em;
   text-align: center;
   font-size: 12px;
   margin-bottom: 2em;
   color: Var(--darkModeTxtClr);
 }
-.project__header__credit span {
+.project__header .project-credit span {
   color: var(--txtChange);
   text-shadow: none;
   font-size: 16px;
   font-family: "Audiowide";
 }
 .project__header__body {
-  width: 95%;
+  width: 100%;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: space-evenly;
   padding-top: 15px;
   margin-bottom: 3em;
 }
 .project__header__body article {
-  width: 275px;
+  width: 100%;
+  max-width: 700px;
   margin: auto;
-  border: 1px solid var(--black);
+  text-align: left;
   padding: 0.25rem;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: Var(--black);
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  color: var(--darkModeTxtClr);
   background-color: var(--bgFilterTheme);
   border-radius: 0.5rem;
 }
-.project__header__body article h3 {
-  color: orangered;
+.project__header__body article .project-synopsis {
+  color: var(--txtChange);
+  font-weight: 600;
+  margin-bottom: 0.25em;
 }
 .project__header__body article span {
-  color: orangered;
   font-weight: 900;
 }
 .project .links {
@@ -717,11 +718,12 @@ footer span {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 95%;
-  background-color: var(--bgFilterBlkDrk);
+  max-width: 700px;
+  background-color: var(--darkModeTxtlgt);
   margin: auto;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 0.5em 0.5em;
   padding: 0.25rem 0.15rem;
+  border: 3px solid var(--toggleTheme);
 }
 .project .links a {
   text-decoration: none;
@@ -739,12 +741,13 @@ footer span {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   gap: 5px;
-  max-width: 95%;
+  max-width: 700px;
   margin: auto;
   align-items: center;
   padding: 1em 0.5em;
-  background-color: var(--bgFilterBlkDrk);
-  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--darkModeTxtlgt);
+  border: 3px solid var(--toggleTheme);
+  border-radius: 0.5em 0.5em 0 0;
 }
 .project .rating__box {
   display: flex;
@@ -761,9 +764,12 @@ footer span {
   color: var(--white);
 }
 .project .wrapper {
-  max-width: 95%;
+  max-width: 700px;
   margin: auto;
   background-color: var(--bgFilterDrk);
+  border: 3px solid var(--toggleTheme);
+  border-top: none;
+  border-bottom: none;
 }
 .project .wrapper .projectBox {
   margin: auto;
@@ -3365,6 +3371,7 @@ label:active:after {
 
 .showBtn {
   margin: 15px auto;
+  max-width: 700px;
   min-height: 1.5em;
   background: none;
   border-radius: 1em;
