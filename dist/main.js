@@ -6,6 +6,8 @@ import * as Top from './js/top.js';
 import * as Lazysizes from './js/lazysizes.min.js';
 import * as Bgset from './js/ls.bgset.min.js';
 import * as ShowBtns from './js/showBtns.js';
+import * as ReadMoreBtn from './js/readMoreBtn.js';
+
 
 // Project Files
 import * as ToDo1 from './js/projects/todo1.js'

@@ -87,6 +87,40 @@
             web sites that I'm building on my path to becoming a Front-End Web
             Developer.
           </p>
+          <div class="readMoreSection">
+            <article class="siteSummary">
+              <p>
+                Anyone who has gone down the Self-Taught route knows you build a
+                lot of projects during that process. After awhile I started
+                making my own templates for the projects, I included a
+                <span class="operator">&ltheader&gt</span> &
+                <span class="operator">&ltfooter&gt</span> for myself. I then
+                put whatever project I'm working on in the
+                <span class="operator">&ltmain&gt</span> tag. I then started to
+                create the templates using the DOM for practice.
+              </p>
+              <p>
+                In the end I ended up with a lot of different little projects.
+                So I decided to make an environment to display all of my
+                projects on one page. I created the
+                <span style="color: var(--txtChange); font-weight: 600"
+                  >"Home Work"</span
+                >
+                web site to display the small projects and skills that I was
+                learning, I further divided the page into chapters that contain
+                similar concepts, they also have different experience levels and
+                skills included.
+              </p>
+              <p>
+                I hope you enjoy and find something that interests you. This
+                site is part of my learning experience and I do not use it for
+                profit.
+              </p>
+            </article>
+          </div>
+          <div class="readMoreBtn">
+            <button class="readMore" id="readMoreBtn">Read More</button>
+          </div>
         </section>
       </section>
     </header>
@@ -111,41 +145,6 @@
       <section class="HWprojects">
         <section class="buttonProjects" id="buttonProjects">
           <div class="chapter" id="darkModeButtons">
-            <article class="siteSummary">
-              <p>
-                Anyone who has gone down the Self-Taught route knows you build a
-                lot of projects on that path. After awhile I started making my
-                own templates for my projects with a
-                <span class="operator">&ltheader&gt</span> &
-                <span class="operator">&ltfooter&gt</span> for myself. I then
-                put whatever project I'm working on in the
-                <span class="operator">&ltmain&gt</span> tag.
-              </p>
-              <p>
-                The next challenge I gave myself was to create the templates
-                using the DOM. So now my project templates were being created
-                using the DOM and not hard coded into the HTML.
-              </p>
-              <p>
-                In the end I ended up with a lot of different little projects.
-                The next challenge was to make an environment to display all of
-                my projects on one Web Site. So I created the
-                <span style="color: var(--txtChange); font-weight: 600"
-                  >"Home Work"</span
-                >
-                web site to display the small projects and skills that I'm
-                learning.
-              </p>
-              <p>
-                I divided the page into chapters that contain similar concepts,
-                they also have different experience levels and skills included.
-              </p>
-              <p>
-                I hope you enjoy and find something that interests you. This
-                site is part of my learning experience and I do not use it for
-                profit.
-              </p>
-            </article>
             <header class="chapter__header">
               <h2>Buttons</h2>
             </header>
@@ -157,12 +156,6 @@
                 The <span>&ltinput&gt</span> and <span>&ltdiv&gt</span>
                 tags are very common elements to create clickable buttons as
                 well.
-              </p>
-              <p>
-                These projects show the different elements that can be used to
-                create a button. I also incorporated some javaScript local
-                storage and <span class="operator">@keyframes</span> for the
-                animation.
               </p>
               <div class="showBtn">
                 <button id="buttonShow">Show Projects</button>
@@ -319,6 +312,7 @@
                   </div>
                 </section>
               </div>
+
               <div class="project">
                 <header class="project__header">
                   <p class="project__header__title">
@@ -328,8 +322,11 @@
                     <article>
                       <p class="project-synopsis">Synopsis:</p>
                       <p>
-                        These Toggle's are created with "<span>input</span>"
-                        elements. They also use Local Storage.
+                        This project uses an
+                        <span class="operator">&ltinput&gt</span> tag to create
+                        the button element. The dark mode button changes the
+                        dark mode on all the project boxes and uses local
+                        storage to save the dark mode position on or off.
                       </p>
                       <p class="project-credit">
                         Inspired by: <span>Design Course</span>
@@ -392,21 +389,28 @@
                   </div>
                 </section>
               </div>
+
               <div class="project">
                 <header class="project__header">
                   <p class="project__header__title">
                     <span class="operator">&ltdiv&gt</span>
                   </p>
                   <section class="project__header__body">
-                    <p class="project-synopsis">Synopsis:</p>
-                    <p>
-                      The "Menu" navigation bar is familiar to most people. It
-                      can be created with "div" elements or the ":before :after"
-                      seudo-elements.
-                    </p>
-                    <p class="project-credit">
-                      Design by: <span>Softcorp Industries</span>
-                    </p>
+                    <article>
+                      <p class="project-synopsis">Synopsis:</p>
+                      <p>
+                        The 3-line "Menu" navigation bar is quite familiar to
+                        most people. I created 3
+                        <span class="operator">&ltdiv&gt</span> tags for the
+                        3-lines for some "Menu" designs. I also created some
+                        "Menu's" with just 1
+                        <span class="operator">&ltdiv&gt</span> tag and used the
+                        :before & :after seudo-elements to create the 3-lines.
+                      </p>
+                      <p class="project-credit">
+                        Design by: <span>Softcorp Industries</span>
+                      </p>
+                    </article>
                     <div class="showBtn">
                       <button id="burger5">Show Project</button>
                     </div>
@@ -501,18 +505,24 @@
                   </div>
                 </section>
               </div>
+
               <div class="project">
                 <header class="project__header">
                   <p class="project__header__title">"Click Events"</p>
-                  <p class="project__header__credit">
-                    Design by: <span>Softcorp Industries</span>
-                  </p>
                   <section class="project__header__body">
-                    <p>
-                      This Button section groups all the buttons with one
-                      attribute. DOM manipulation is then used to display any
-                      actions from the "event".
-                    </p>
+                    <article>
+                      <div class="project-synopsis">Synopsis:</div>
+                      <p>
+                        This Button project uses one attribute to group all the
+                        elements with-in that group with the same attribute
+                        using the querySelectorAll() method. DOM manipulation is
+                        then used to display any actions from the "e.target
+                        event".
+                      </p>
+                      <p class="project-credit">
+                        Design by: <span>Softcorp Industries</span>
+                      </p>
+                    </article>
                     <div class="showBtn">
                       <button id="oneBtn">Show Project</button>
                     </div>
