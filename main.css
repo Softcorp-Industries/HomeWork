@@ -3097,6 +3097,14 @@ label:active:after {
   background-color: var(--bgFilter);
 }
 
+#uiProject {
+  display: none;
+}
+
+#uiProject.showProject {
+  display: block;
+}
+
 .tabletBox {
   display: none;
   max-width: 475px;
@@ -3373,7 +3381,8 @@ label:active:after {
 
 .showBtn {
   margin: 15px auto;
-  max-width: 700px;
+  width: 100%;
+  max-width: 500px;
   min-height: 1.5em;
   background: none;
   border-radius: 1em;

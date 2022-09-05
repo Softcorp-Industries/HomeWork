@@ -1,9 +1,12 @@
 //alert('fuck you');
 function enableShowProjectsBtn(e) {
   e.target.parentElement.parentElement.nextElementSibling.classList.add('showProject');
+  e.target.innerHTML = 'Hide Projects';
 }
 function disableShowProjectsBtn(e) {
   e.target.parentElement.parentElement.nextElementSibling.classList.remove('showProject');
+  e.target.innerHTML = 'Show Projects';
+
 }
 //  Projects Button
 const buttonShow = document.getElementById('buttonShow');
@@ -11,12 +14,15 @@ const imgBtnShow = document.getElementById('imgShow');
 const animBtnShow = document.getElementById('animationProjectBtn');
 const storageProjectBtn = document.getElementById('storageProjectBtn');
 const webPlayerBtn = document.getElementById('webPlayerProjectBtn');
+const uiProjectBtn = document.getElementById('uiProjectBtn');
 
 let buttonShowOpen = false;
 let imgBtnShowOpen = false;
 let animBtnShowOpen = false;
 let storageBtnShowOpen = false;
 let webPlayerShowOpen = false;
+let uiBtnShowOpen = false;
+
 
 function showButtonProjects() {
   buttonShow.addEventListener('click', (e) => {
@@ -73,22 +79,37 @@ function showWebPlayerProjects() {
     }
   })
 }
+function showUIProjects() {
+  uiProjectBtn.addEventListener('click', (e) => {
+    if (!uiBtnShowOpen) {
+      enableShowProjectsBtn(e);
+      uiBtnShowOpen = true;
+    } else {
+      disableShowProjectsBtn(e);
+      uiBtnShowOpen = false
+    }
+  })
+}
 showButtonProjects();
 showImgProjects();
 showAnimProjects();
 showStorageProjects();
 showWebPlayerProjects();
+showUIProjects();
+
 
 //  Project Button
 function enableShowProjectBtn(e) {
   //console.log(e.target.parentElement.parentElement.parentElement.nextElementSibling);
   e.target.parentElement.parentElement.parentElement.nextElementSibling.classList.add('showProject');
+  e.target.innerHTML = 'Hide Project';
   //buttonShow.style.backgroundColor = "var(--secondaryClr)";
   //buttonShow.style.color = "var(--secondaryTxt)";
 }
 function disableShowProjectBtn(e) {
   //console.log(e.target);
   e.target.parentElement.parentElement.parentElement.nextElementSibling.classList.remove('showProject');
+  e.target.innerHTML = 'Show Project';
   //buttonShow.style.color = "var(--secondaryClr)";
   //buttonShow.style.backgroundColor = "";
 }
