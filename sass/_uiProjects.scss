@@ -12,6 +12,12 @@
     background-color: var(--bgFilter);
   }
 }
+#uiProject {
+  display: none;
+}
+#uiProject.showProject {
+  display: block;
+}
 .tabletBox {
   display: none;
   max-width: 475px;

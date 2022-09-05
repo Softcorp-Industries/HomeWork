@@ -4,7 +4,6 @@ const readMoreBtn = document.getElementById('readMoreBtn');
 
 let readMoreOpen = false;
 
-
 function enableReadMore(e) {
   console.log(e.target.parentElement.previousElementSibling);
   e.target.parentElement.previousElementSibling.style.display = 'block';
@@ -34,4 +33,5 @@ function readMore() {
     })
   })
 }
+
 readMore();
