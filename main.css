@@ -2287,6 +2287,9 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
 #buttonProject {
   display: none;
 }
+#buttonProject .projectBox {
+  padding: 0;
+}
 
 #buttonProject.showProject {
   display: block;
@@ -2309,16 +2312,19 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
 }
 .toggleButton .toggleBtns {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
 }
 .toggleButton .toggle-container {
+  display: flex;
+  flex-direction: column;
   width: 120px;
-  margin: auto;
+  margin: 0.25em auto;
 }
 .toggleButton .toggle-container h4 {
-  font-size: 18px;
+  letter-spacing: 1px;
+  font-size: 16px;
   color: var(--inputToggleTxt);
-  padding: 0.5rem;
+  padding: 0.5em;
   text-align: center;
 }
 .toggleButton .toggle-container .btn-container {
@@ -2400,6 +2406,20 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   letter-spacing: 2px;
 }
 
+@media screen and (min-width: 481px) {
+  #buttonProject .projectBox {
+    padding: 1em;
+  }
+  .toggleButton .toggleBtns {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .toggle-container {
+    width: 150px;
+  }
+  .toggle-container .btn-container {
+    width: 150px;
+  }
+}
 #toggleInputs {
   display: none;
 }
