@@ -204,11 +204,11 @@ if (
   (defaultToggleStore === "enabled" && !sassToggleOn) ||
   (defaultToggleStore === "enabled" && !jsToggleOn)
 ) {
-  enableDefaultToggle();
   disableHtmlToggle();
   disableCssToggle();
   disableSassToggle();
   disableJsToggle()
+  enableDefaultToggle();
 }
 if (
   (htmlToggleStore === "enabled" && !defaultToggleOn) ||
@@ -216,11 +216,11 @@ if (
   (htmlToggleStore === "enabled" && !sassToggleOn) ||
   (htmlToggleStore === "enabled" && !jsToggleOn)
 ) {
-  enableHtmlToggle();
   disableDefaultToggle();
   disableCssToggle();
   disableSassToggle();
   disableJsToggle();
+  enableHtmlToggle();
 }
 if (
   (cssToggleStore === "enabled" && !defaultToggleOn) ||
@@ -228,11 +228,11 @@ if (
   (cssToggleStore === "enabled" && !sassToggleOn) ||
   (cssToggleStore === "enabled" && !jsToggleOn)
 ) {
-  enableCssToggle();
   disableDefaultToggle();
   disableHtmlToggle();
   disableSassToggle();
   disableJsToggle();
+  enableCssToggle();
 }
 if (
   (sassToggleStore === "enabled" && !defaultToggleOn) ||
@@ -240,11 +240,11 @@ if (
   (sassToggleStore === "enabled" && !cssToggleOn) ||
   (sassToggleStore === "enabled" && !jsToggleOn)
 ) {
-  enableSassToggle();
   disableDefaultToggle();
   disableHtmlToggle();
   disableCssToggle();
   disableJsToggle();
+  enableSassToggle();
 }
 if (
   (jsToggleStore === "enabled" && !defaultToggleOn) ||
@@ -252,11 +252,11 @@ if (
   (jsToggleStore === "enabled" && !cssToggleOn) ||
   (jsToggleStore === "enabled" && !sassToggleOn)
 ) {
-  enableJsToggle();
   disableDefaultToggle();
   disableHtmlToggle();
   disableCssToggle();
   disableSassToggle();
+  enableJsToggle();
 }
 
 function defaultToggleAction() {
