@@ -1472,7 +1472,7 @@ footer span {
   height: 200px;
   width: 200px;
   cursor: pointer;
-  background-color: var(--darkModeBgOp);
+  background-color: var(--darkModeBg);
   margin-bottom: 15px;
 }
 .transform .transform-container1__item .hoverBox {
@@ -1481,7 +1481,8 @@ footer span {
   background-color: var(--toggleTheme);
 }
 .transform .transform-container1 p {
-  font-size: 1.25em;
+  letter-spacing: 1px;
+  font-size: 1em;
   text-align: center;
   color: var(--inputToggleTxt);
   margin-bottom: 25px;

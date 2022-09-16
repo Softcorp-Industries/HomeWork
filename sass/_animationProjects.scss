@@ -52,7 +52,7 @@
       height: 200px;
       width: 200px;
       cursor: pointer;
-      background-color: var(--darkModeBgOp);
+      background-color: var(--darkModeBg);
       margin-bottom: 15px;
       .hoverBox {
         width: 50%;
@@ -61,7 +61,8 @@
       }
     }
     p {
-      font-size: 1.25em;
+      letter-spacing: 1px;
+      font-size: 1em;
       text-align: center;
       color: var(--inputToggleTxt);
       margin-bottom: 25px;
