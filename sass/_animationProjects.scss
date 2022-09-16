@@ -30,7 +30,7 @@
   text-align: center;
   .transform-container1 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     margin: auto;
     padding: 0.5rem;
@@ -49,20 +49,21 @@
     }
     &__item {
       margin: auto;
-      height: 100px;
-      width: 100px;
+      height: 200px;
+      width: 200px;
       cursor: pointer;
       background-color: var(--darkModeBgOp);
       margin-bottom: 15px;
       .hoverBox {
         width: 50%;
         height: 50%;
-        background-color: coral;
+        background-color: var(--toggleTheme);
       }
     }
-    h3 {
+    p {
+      font-size: 1.25em;
       text-align: center;
-      color: var(--black);
+      color: var(--inputToggleTxt);
       margin-bottom: 25px;
     }
   }
@@ -119,44 +120,46 @@
       .ninjaBox {
         overflow: hidden;
         margin: auto;
-        width: 175px;
-        height: 100px;
+        width: 80%;
+        max-width: 250px;
+        height: 150px;
         top: 100px;
         transform-origin: 17px 150px;
-        background-color: var(--darkModeBgOp);
+        background-color: var(--inputToggleTheme);
         border-radius: 0.5rem;
         opacity: 0;
         .ninjaBox__header {
+          padding: .25em;
           display: grid;
           grid-template-columns: 30px auto 30px;
-          background-color: coral;
-          padding: 0.25rem;
+          background-color: var(--toggleTheme);
           h3 {
-            font-size: 16px;
-            color: var(--bgSecondary);
+            letter-spacing: 1px;
+            font-family: "Audiowide";
+            font-size: 18px;
+            color: var(--darkModeTxtClr);
           }
           .screw {
-            width: 18.75px;
-            height: 18.75px;
+            content: "";
             margin: auto;
-            color: black;
-            text-align: center;
-            background-color: silver;
-            border-radius: 50%;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            width: 21px;
+            height: 18px;
+            background-color: black;
           }
         }
         h4 {
           font-size: 1rem;
-          padding: 0.5rem;
+          padding: 0.75rem;
           opacity: 0;
-          color: var(--darkModeBg);
+          color: var(--toggleTheme);
         }
         p {
           font-size: 1.5rem;
           text-align: right;
           font-weight: 700;
           letter-spacing: 0.1rem;
-          color: var(--darkModeTxtClr);
+          color: var(--toggleTheme);
           padding-right: 1rem;
           padding-top: 1.5rem;
           opacity: 0;
@@ -164,12 +167,12 @@
       }
     }
   }
-  &__container2__item1:hover .ninjaBox {
+  .container2__item1:hover .ninjaBox {
     animation: drop 750ms ease-in forwards, swing 2.25s ease-in-out 2s forwards,
       fall 300ms 4.75s linear forwards;
     opacity: 1;
     &__header .screw {
-      animation: spin 650ms linear forwards 1s;
+      animation: spin 500ms linear forwards 1.25s;
     }
     h4 {
       animation: quality 500ms 600ms ease-in-out forwards;
@@ -200,7 +203,7 @@
     transform: rotateZ(0deg);
   }
   100% {
-    transform: rotateZ(600deg);
+    transform: rotateZ(450deg);
   }
 }
 @keyframes swing {
@@ -240,19 +243,23 @@
     opacity: 0;
   }
   100% {
-    transform: translate(20px);
+    transform: translateX(0px);
     opacity: 1;
   }
 }
 @keyframes counts {
   0% {
-    transform: translateY(-17px);
-    opacity: 1;
+    transform: translateY(0px);
+    opacity: 0;
+          font-size: 1.5rem;
+
   }
 
   100% {
-    transform: translateY(-37px);
+    transform: translateY(-20px);
     opacity: 1;
+          font-size: 1.75rem;
+
   }
 }
 

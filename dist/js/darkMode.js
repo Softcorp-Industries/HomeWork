@@ -1,12 +1,6 @@
 // Dark Mode and Local Storage
 const darkModeBtn = document.getElementById("darkModeBtn");
-const darkModeLanding = document.getElementById("darkModeLanding");
-const darkModeButtons = document.getElementById("darkModeButtons");
-const darkModeImages = document.getElementById("darkModeImages");
-const darkModeAnimations = document.getElementById("darkModeAnimations");
-const darkModeStorage = document.getElementById("darkModeStorage");
-const darkModeWebPlayers = document.getElementById("darkModeWebPlayers");
-const darkModeUI = document.getElementById("darkModeUI");
+const darkModeFilter = document.getElementById('darkModeFilter');
 
 let darkModeSt = localStorage.getItem("darkModeSt");
 
@@ -14,32 +8,29 @@ let darkModeOn = false;
 
 const enableDarkMode = () => {
   document.body.setAttribute("data-darkMode", "darkMode");
-  darkModeBtn.style.backgroundImage = "url(img/icon/sun_light_mode_day-2-512.webp)"
+  darkModeBtn.style.backgroundImage = "url(img/icon/darkMode-icon-light512.webp)"
   darkModeBtn.classList.add("darkModeAnim");
-  darkModeBtn.classList.remove("darkModeAnimRev")
-  darkModeLanding.classList.add("darkModeFilter");
-  darkModeButtons.classList.add("darkModeFilter");
-  darkModeImages.classList.add("darkModeFilter");
-  darkModeAnimations.classList.add("darkModeFilter");
-  darkModeStorage.classList.add("darkModeFilter");
-  darkModeWebPlayers.classList.add("darkModeFilter");
-  darkModeUI.classList.add("darkModeFilter");
+  darkModeBtn.classList.remove("darkModeAnimRev");
+  darkModeFilter.classList.add("darkModeFilter");
+  darkModeFilter.style.backgroundImage = "none"
+  //darkModeLanding.classList.add("darkModeFilter")
+  //darkModeTitle.classList.add("darkModeFilter")
   localStorage.setItem("darkModeSt", "enabled");
 };
 const disableDarkMode = () => {
   document.body.setAttribute("data-darkMode", "light");
-  darkModeBtn.style.backgroundImage = "url(img/icon/936949-200.png)"
+  darkModeBtn.style.backgroundImage = "url(img/icon/darkMode-icon.png)"
   darkModeBtn.classList.add("darkModeAnimRev");
   darkModeBtn.classList.remove("darkModeAnim");
-  darkModeLanding.classList.remove("darkModeFilter");
-  darkModeButtons.classList.remove("darkModeFilter");
-  darkModeImages.classList.remove("darkModeFilter");
-  darkModeAnimations.classList.remove("darkModeFilter");
-  darkModeStorage.classList.remove("darkModeFilter");
-  darkModeWebPlayers.classList.remove("darkModeFilter");
-  darkModeUI.classList.remove("darkModeFilter");
+  darkModeFilter.classList.remove("darkModeFilter");
+  darkModeFilter.style.backgroundImage = "url(./img/backgrounds/clouds_72634.jpg"
+
+
+  //darkModeLanding.classList.remove("darkModeFilter")
+  //darkModeTitle.classList.remove("darkModeFilter")
   localStorage.setItem("darkModeSt", "disabled");
 };
+
 if (darkModeSt === "enabled") {
   enableDarkMode();
 }
@@ -48,6 +39,7 @@ function darkModeActive() {
     darkModeBtn.addEventListener("click", () => {
       darkModeSt = localStorage.getItem("darkModeSt");
       if (darkModeSt !== "enabled" && !darkModeOn) {
+
         enableDarkMode();
         trans();
         darkModeOn = true;
@@ -59,6 +51,7 @@ function darkModeActive() {
     });
   });
 }
+
 darkModeActive();
 
 let trans = () => {

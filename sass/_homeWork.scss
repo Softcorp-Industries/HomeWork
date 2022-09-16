@@ -1,46 +1,41 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-.mainHeader {
-  //padding-top: 1em;
-  //background-image: url("img/tech_img/mwesigwa-joel-1500.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top;
-  //margin-bottom: 2em;
+#main-header {
+  .pageTitle {
+    letter-spacing: 3px;
+    padding: .5em;
+    padding-bottom: .25em;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "The Nautigal";
+    text-align: center;
+    color: var(--txtChange);
+  }
+  h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--txtChange);
+  font-family: "Audiowide";
+  font-size: 1.5em;
+  padding-bottom: .5em
 }
-.landing {
-  .title {
-    padding-top: 3em;
-    width: 100%;
-    background-size: cover;
-    background-position: top;
-    text-align: center;
-    text-shadow: 0px 0px 7px var(--darkModeBg);
-    color: var(--txtChange);
-    font-weight: 900;
-    font-size: 1em;
-    font-family: "Audiowide";
-    letter-spacing: 2px;
-  }
-  .greeting {
-    width: 100%;
-    padding: 1em 0;
-    text-align: center;
-    font-size: 0.8em;
-    font-family: "Audiowide";
-    color: var(--txtChange);
-    text-shadow: 0px 0px 3px var(--darkModeBg);
-    letter-spacing: 2px;
-  }
-  .landingImg {
-    display: block;
-    margin: 1.5em auto;
-    opacity: 0.8;
-    width: calc(11vw + 11em);
-    border-radius: 0.25em;
-  }
+}
+.landingImg {
+  display: block;
+  margin: 1.5em auto;
+  opacity: 0.8;
+  width: calc(11vw + 11em);
+  border-radius: 0.25em;
+}
+.greeting {
+  width: 100%;
+  text-align: center;
+  font-size: .9em;
+  font-family: "Audiowide";
+  color: var(--txtChange);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
+  letter-spacing: 2px;
 }
 .welcome {
   &__header {
@@ -136,7 +131,7 @@
 .projects {
   width: 100%;
   border: none;
-  padding: 1rem;
+  padding: 1em;
   text-align: center;
 }
 
@@ -202,39 +197,21 @@
       }
     }
   }
-  .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 700px;
-    background-color: var(--darkModeTxtlgt);
+  .wrapper {
+    // Wrapper contains the Project box
     margin: auto;
-    border-radius: 0 0 0.5em 0.5em;
-    padding: 0.25rem 0.15rem;
     border: 3px solid var(--toggleTheme);
-    a {
-      text-decoration: none;
-    }
-    h5 {
-      line-height: 1.5;
-      font-size: 12px;
-      letter-spacing: 1px;
-      span {
-        color: orangered;
-        text-shadow: none;
-      }
-    }
+    border-radius: .5em;
+    max-width: 800px;
+    background-color: var(--darkModeTxtlgt);
   }
   .rating {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(2.5em, 1fr));
-    max-width: 700px;
-    margin: auto;
     align-items: center;
     padding: 0.5em;
     background-color: var(--darkModeTxtlgt);
-    border: 3px solid var(--toggleTheme);
+    border-bottom: 3px solid var(--toggleTheme);
     border-radius: .5em .5em 0 0;
     &__box {
       margin: auto;
@@ -247,33 +224,47 @@
       }
     }
   }
-
-  .wrapper {
-    // Wrapper contains the Project box
-    max-width: 700px;
-    margin: auto;
-    background-color: var(--bgFilterDrk);
-    border: 3px solid var(--toggleTheme);
-    border-top: none;
-    border-bottom: none;
-    .projectBox {
-      // All code for the Project will inside the Project Box
+  .projectBox {
+    // All code for the Project will inside the Project Box
+    background-color: var(--inputToggleTheme);
+    padding: 1em;
+    .tributeBox {
       margin: auto;
-      background-color: var(--inputToggleThemeFilter);
-      .tributeBox {
+      padding: 0.5rem;
+      color: var(--inputToggleTxt);
+      &__video {
+        height: 275px;
         margin: auto;
-        padding: 0.5rem;
-        &__video {
-          height: 275px;
-          margin: auto;
-          min-width: 200px;
-          max-width: 250px;
-          iframe {
-            width: 100%;
-            height: 100%;
-            border-radius: 0.5rem;
-          }
+        min-width: 200px;
+        max-width: 250px;
+        iframe {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
         }
+      }
+    }
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--darkModeTxtlgt);
+    padding: 0.25em;
+    border-top: 3px solid var(--toggleTheme);
+    border-radius: 0 0 .5em .5em;
+    a {
+      text-decoration: none;
+    }
+    h5 {
+      line-height: 1.5;
+      font-size: 12px;
+      letter-spacing: 1px;
+      span {
+        color: orangered;
+        text-shadow: none;
       }
     }
   }
@@ -288,22 +279,9 @@
         width: 85%;
       }
     }
-    .rating,
-    .links {
-      width: 85%;
-    }
-    .wrapper {
-      width: 85%;
-    }
   }
 }
 @media (min-width: 481px) {
-  .landing {
-    .title {
-      padding-top: 2em;
-      font-size: 1.25em;
-    }
-  }
   .project {
     background-size: cover;
     &__header {
@@ -313,7 +291,27 @@
     }
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 680px) {
+  #main-header {
+    h1 {
+      font-size: 1.75em;
+    }
+  }
+  .project {
+    .rating {
+      &__box {
+        width: 3em;
+      }
+    }
+  }
+}
+@media (min-width: 800px) {
+  #main-header {
+    h1 {
+      letter-spacing: 4px;
+      font-size: 2.25em;
+    }
+  }
   .project {
     background-size: cover;
     &__header {
@@ -322,10 +320,8 @@
       }
     }
     .rating {
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 10px;
       &__box {
-        width: 140px;
+        width: 3.25em;
       }
     }
     .links {
@@ -335,21 +331,13 @@
   }
 }
 @media (min-width: 1024px) {
-  .mainHeader {
-    .title {
-      padding-top: 0.5em;
-      font-size: 3.25em;
-    }
+  .greeting {
+    padding-bottom: .5em;
+    font-size: 1.2em;
   }
-  .landing {
-    .greeting {
-      font-size: 1.2em;
-    }
-    .landingImg {
+  .landingImg {
+    margin: auto;
     width: calc(13vw + 13em);
-    margin: 1em auto;
-
-    }
   }
 }
 @media (min-width: 1200px) {

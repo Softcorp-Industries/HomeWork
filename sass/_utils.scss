@@ -1,32 +1,35 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-.darkMode {
+#darkMode {
   @include shadowSm-inset;
   position: fixed;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: left;
-  padding: 3px;
-  top: 30px;
-  right: 15px;
-  width: 50px;
-  height: 26px;
+  padding: .15rem;
+  top: .9em;
+  right: .5em;
+  width: 60px;
+  height: 30px;
   background-color: var(--bgDarkMode);
-  border-radius: 70px;
+  border-radius: 1.2rem;
   z-index: 10;
   .dmToggle {
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    content: "";
+    width: 22px;
+    height: 22px;
+    margin-left: 2px;
     border-radius: 50%;
     border: none;
-    background-image: url("img/icon/936949-200.png");
+    background-color: whitesmoke;
+    background-image: url("img/icon/darkMode-icon.png");
     background-size: contain;
     background-position: center;
   }
 }
-.darkMode.showDarkMode{
+#darkMode.showDarkMode{
   display: flex;
   animation: darkModeShow 750ms ease-in-out forwards;
 }
@@ -36,20 +39,40 @@
 .dmToggle.darkModeAnimRev{
   animation: dmAnimRev 500ms ease-in-out forwards;
 }
+@keyframes darkModeShow{
+  0%{
+    scale: 0;
+    opacity: 0;
+  }
+  
+  100%{
+    scale: 1;
+      opacity: 1;
+  }
+}
+@keyframes dmAnim {
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(30px);
+  }
+}
+@keyframes dmAnimRev {
+  0%{
+    transform: translateX(30px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
 .navBtn {
   z-index: 6;
   position: fixed;
-  cursor: pointer;
+  top: 1.5em;
+  left: .5em;
   &__menu {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    //cursor: pointer;
-    top: 1.5em;
-    left: .75em;
-    width: 2.5em;
-    height: 2.5em;
+    cursor: pointer;
     border-radius: 50%;
     transition: all 0.5s ease-in-out;
     &__btn {

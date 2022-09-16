@@ -28,27 +28,27 @@
 }
 
 .toggleButton {
-  .toggleSummary{
-    padding: .5em;
+  .toggleSummary {
+    padding: 0.5em;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
-    background-color: var(--toggleTheme);
+    //background-color: var(--toggleTheme);
     border-radius: 1em;
   }
-  .toggleBtns{
+  .toggleBtns {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
   .toggle-container {
-    width: 200px;
+    width: 120px;
     margin: auto;
     h4 {
       font-size: 18px;
-      color: var(--toggleTheme);
+      color: var(--inputToggleTxt);
       padding: 0.5rem;
       text-align: center;
-      text-shadow: 0px 0px 2px var(--black)
+      //text-shadow: 0px 0px 2px var(--darkModeTxtClr)
     }
     .btn-container {
       @include shadowSm-inset;
@@ -56,61 +56,73 @@
       display: flex;
       align-items: center;
       justify-content: left;
-      width: 200px;
-      height: 100px;
+      width: 120px;
+      height: 60px;
       margin: auto;
-      background-color: var(--toggleTheme);
-      border-radius: 100px;
+      border-radius: 60px;
       margin-bottom: 25px;
       .toggle {
-        @include shadowSm;
         cursor: pointer;
-        margin-left: 10px;
-        width: 85px;
-        height: 85px;
+        margin-left: 7px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
+        box-shadow: 0px 0px 2px black;
         border: none;
         outline: none;
+        img {
+          width: 100%;
+        }
       }
     }
   }
 }
-#defaultIcon{
-  color: var(--defaultThemeClr);
+#defaultIcon {
+  //color: var(--defaultThemeClr);
+  width: 42px;
+  margin-top: 3px;
   text-align: center;
-  font-size: 18px;
-  font-family: 'Audiowide';
+  font-size: 12px;
+  font-family: "Audiowide";
   letter-spacing: 1px;
 }
-#htmlIcon{
+#htmlIcon {
+  width: 40px;
+  margin-top: 3px;
   color: var(--htmlThemeClr);
   text-align: center;
-  font-size: 18px;
-  font-family: 'Audiowide';
+  font-size: 12px;
+  font-family: "Audiowide";
   text-shadow: 0px 0px 2px var(--black);
   letter-spacing: 2px;
 }
-#cssIcon{
+#cssIcon {
+  width: 40px;
+  margin-top: 3px;
   color: var(--cssThemeClr);
   text-align: center;
-  font-size: 18px;
-  font-family: 'Audiowide';
+  font-size: 12px;
+  font-family: "Audiowide";
   text-shadow: 0px 0px 2px var(--black);
   letter-spacing: 2px;
 }
-#sassIcon{
+#sassIcon {
+  width: 40px;
+  margin-bottom: 2px;
   color: var(--sassThemeClr);
   text-align: center;
-  font-size: 18px;
-  font-family: 'Audiowide';
+  font-size: 12px;
+  font-family: "Audiowide";
   text-shadow: 0px 0px 2px var(--black);
   letter-spacing: 2px;
 }
-#jsIcon{
+#jsIcon {
+  width: 35px;
+  margin-top: 8px;
   color: var(--jsThemeClr);
   text-align: center;
-  font-size: 18px;
-  font-family: 'Audiowide';
+  font-size: 12px;
+  font-family: "Audiowide";
   text-shadow: 0px 0px 2px var(--black);
   letter-spacing: 2px;
 }
@@ -121,34 +133,35 @@
   display: block;
 }
 
-.inputContainer{
+.inputContainer {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#inputToggleTheme{
+#inputToggleTheme {
   background-color: var(--inputToggleTheme);
 }
-#toggleInputHeader{
-color: var(--inputToggleTxt);
+#toggleInputHeader {
+  color: var(--inputToggleTxt);
 }
-  .toggleInput-container {
-    background-color: var(--bg-panel);
+.toggleInput-container {
+  
+  //background-color: var(--bg-panel);
   margin: auto;
   //padding: 5em;
   border-radius: 15px;
   display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   h4 {
     width: 100%;
     font-size: 18px;
-      text-align: center;
-      padding: 0.5rem;
-      color: var(--black);
-    }
+    text-align: center;
+    padding: 0.5rem;
+    color: var(--black);
   }
-
+}
 
 // This code for the checkbox is from Codepen by Marcus Burnette
 
@@ -159,6 +172,7 @@ input[type="checkbox"] {
 }
 
 label {
+  @include shadowSm-inset;
   position: relative;
   cursor: pointer;
   text-indent: -9999px;
@@ -172,16 +186,16 @@ label {
 label:after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: 5px;
-  width: 90px;
-  height: 90px;
+  width: 85px;
+  height: 85px;
   background: #fff;
   border-radius: 90px;
   transition: 0.3s;
   background-image: url("img/icon/936949-200.png");
-      background-size: contain;
-      background-position: center;
+  background-size: contain;
+  background-position: center;
 }
 
 input:checked + label {
@@ -189,44 +203,43 @@ input:checked + label {
 }
 
 input:checked + label:after {
-  left: calc(100% - 5px);
+  left: calc(100% - 7px);
   transform: translateX(-100%);
   background-image: url("img/icon/sun_light_mode_day-2-512.webp");
-      background-size: contain;
-      background-position: center;
+  background-size: contain;
+  background-position: center;
 }
 
 label:active:after {
   width: 130px;
 }
 
-.toggleIcon{
+.toggleIcon {
   border-radius: 50%;
 }
-  // Toggle Animations
-  .toggle.toggleAnim {
-    animation: tglAnimFwd 400ms linear both;
+// Toggle Animations
+.toggle.toggleAnim {
+  animation: tglAnimFwd 400ms linear both;
+}
+.toggle.toggleAnimRev {
+  animation: tglAnimRev 400ms linear both;
+}
+@keyframes tglAnimFwd {
+  0% {
+    transform: translateX(0px);
   }
-  .toggle.toggleAnimRev {
-    animation: tglAnimRev 400ms linear both;
+  100% {
+    transform: translateX(55px);
   }
-  @keyframes tglAnimFwd {
-    0% {
-      transform: translateX(0px);
-    }
-    100% {
-      transform: translateX(95px);
-    }
+}
+@keyframes tglAnimRev {
+  0% {
+    transform: translateX(55px);
   }
-  @keyframes tglAnimRev {
-    0% {
-      transform: translateX(95px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
+  100% {
+    transform: translateX(0px);
   }
-
+}
 
 #burgerSection {
   display: none;
@@ -313,7 +326,6 @@ label:active:after {
     }
   }
 }
-
 
 // One Button Click Events
 #btn {

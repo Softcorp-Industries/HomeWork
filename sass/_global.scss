@@ -24,7 +24,7 @@
   
   --darkModeBg: #e3e3e3;
   --darkModeTxtClr: rgb(25, 25, 25);
-  --darkModeTxtlgt: #e3e3e3;
+  --darkModeTxtlgt: rgba(255, 255, 255, 0.6);
   
   --bgFilter: rgba(255, 255, 255, 0.2);
   --bgFilterBlk: rgba(0, 0, 0);
@@ -36,7 +36,7 @@
   
   --toggleTheme: #bebebeb;
   --inputToggleThemeFilter: rgba(255, 255, 255, 0.2);
-  --inputToggleTheme: #c7c7c7;
+  --inputToggleTheme: rgba(255, 255, 255, 0.6);
   --inputToggleTxt: rgb(54, 54, 54);
   
   --xsmSpacer: 0.25em;
@@ -45,7 +45,6 @@
   --lgSpacer: 1.5em;
   --xlgSpacer: 2em;
   --xxlgSpacer: 3em;
-  
 }
 
 body.transition,
@@ -65,7 +64,7 @@ body[data-darkMode="darkMode"] {
 
   --darkModeBgblk: rgb(0, 0, 0); // from
   --darkModeTxtClr: white; // from rgb(54, 54, 54)
-  --darkModeTxtlgt: rgb(54, 54, 54); // from
+  --darkModeTxtlgt: rgba(255, 255, 255, 0.6);  
   --themeTxtClr: white; // from
   --themeBlk: rgb(99, 99, 99); // from whitesmoke
   --themeBg: black;
@@ -74,7 +73,7 @@ body[data-darkMode="darkMode"] {
 }
 
 body[data-toggleTheme="dark"] {
-  --inputToggleTheme: grey;
+  --inputToggleTheme: rgb(150, 150, 150);
   --inputToggleThemeFilter: var(--bgFilterBlkDrk);
   --inputToggleTxt: var(--white);
 }

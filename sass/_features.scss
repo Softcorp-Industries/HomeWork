@@ -86,8 +86,6 @@
   max-width: 500px;
   min-height: 1.5em;
   background: none;
-  //background-color: var(--bgPrimary);
-  //border: 2px solid var(--black);
   border-radius: 1em;
   button {
     @include darkMode;
@@ -137,8 +135,6 @@
 }
 .readMoreSection {
   margin: auto;
-  //margin-top: -27em;
-  //overflow: hidden;
   opacity: 0;
   display: none;
 }
