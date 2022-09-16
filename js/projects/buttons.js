@@ -69,10 +69,6 @@ let jsToggleOn = false;
 const enableDefaultToggle = () => {
   document.body.setAttribute("data-toggleMode", "default");
   defaultIcon.setAttribute('src', 'img/icon/color-wheel.jpg');
-  htmlIcon.setAttribute('src', '');
-  cssIcon.setAttribute('src', '');
-  sassIcon.setAttribute('src', '');
-  jsIcon.setAttribute('src', '');
   defaultToggle.classList.add("toggleAnim");
   defaultToggle.classList.remove("toggleAnimRev");
   htmlToggle.classList.add("toggleAnimRev");
@@ -90,7 +86,6 @@ const enableDefaultToggle = () => {
   localStorage.setItem("defaultToggleStore", "enabled");
 };
 const disableDefaultToggle = () => {
-  defaultIcon.setAttribute('src', '')
   defaultToggle.classList.add("toggleAnimRev");
   defaultToggle.classList.remove("toggleAnim");
   enableDefaultToggle();
@@ -100,10 +95,6 @@ const disableDefaultToggle = () => {
 const enableHtmlToggle = () => {
   document.body.setAttribute("data-toggleMode", "htmlTheme");
   htmlIcon.setAttribute('data-src', 'img/icon/HTML5_logo.svg.png');
-  defaultIcon.setAttribute('src', '');
-  cssIcon.setAttribute('src', '');
-  sassIcon.setAttribute('src', '');
-  jsIcon.setAttribute('src', '');
   htmlToggle.classList.add("toggleAnim");
   htmlToggle.classList.remove("toggleAnimRev");
   defaultToggle.classList.add("toggleAnimRev");
@@ -121,7 +112,6 @@ const enableHtmlToggle = () => {
   localStorage.setItem("htmlToggleStore", "enabled");
 }
 const disableHtmlToggle = () => {
-  htmlIcon.setAttribute('src', '')
   htmlToggle.classList.add("toggleAnimRev");
   htmlToggle.classList.remove("toggleAnim");
   enableDefaultToggle();
@@ -130,11 +120,7 @@ const disableHtmlToggle = () => {
 
 const enableCssToggle = () => {
   document.body.setAttribute("data-toggleMode", "cssTheme");
-  cssIcon.setAttribute('src', 'img/icon/CSS.3b.svg.png');
-  defaultIcon.setAttribute('src', '');
-  htmlIcon.setAttribute('src', '')
-  sassIcon.setAttribute('src', '');
-  jsIcon.setAttribute('src', '');
+  cssIcon.setAttribute('src', 'img/icon/css3-logo3.svg.png');
   cssToggle.classList.add("toggleAnim");
   cssToggle.classList.remove("toggleAnimRev");
   defaultToggle.classList.add("toggleAnimRev");
@@ -152,7 +138,6 @@ const enableCssToggle = () => {
   localStorage.setItem("cssToggleStore", "enabled");
 };
 const disableCssToggle = () => {
-  cssIcon.setAttribute('src', '');
   cssToggle.classList.add("toggleAnimRev");
   cssToggle.classList.remove("toggleAnim");
   enableDefaultToggle();
@@ -162,10 +147,6 @@ const disableCssToggle = () => {
 const enableSassToggle = () => {
   document.body.setAttribute("data-toggleMode", "sassTheme");
   sassIcon.setAttribute('src', 'img/icon/sass-1.svg')
-  defaultIcon.setAttribute('src', '');
-  htmlIcon.setAttribute('src', '');
-  cssIcon.setAttribute('src', '');
-  jsIcon.setAttribute('src', '');
   sassToggle.classList.add("toggleAnim");
   sassToggle.classList.remove("toggleAnimRev");
   defaultToggle.classList.add("toggleAnimRev");
@@ -183,7 +164,6 @@ const enableSassToggle = () => {
   localStorage.setItem("sassToggleStore", "enabled");
 };
 const disableSassToggle = () => {
-  sassIcon.setAttribute('src', '');
   sassToggle.classList.add("toggleAnimRev");
   sassToggle.classList.remove("toggleAnim");
   enableDefaultToggle();
@@ -192,11 +172,7 @@ const disableSassToggle = () => {
 
 const enableJsToggle = () => {
   document.body.setAttribute("data-toggleMode", "jsTheme");
-  jsIcon.setAttribute('src', 'img/icon/Javascript-logo.svg.png');
-  defaultIcon.setAttribute('src', '');
-  htmlIcon.setAttribute('src', '');
-  cssIcon.setAttribute('src', '');
-  sassIcon.setAttribute('src', '');
+  jsIcon.setAttribute('src', 'img/icon/javascript-logo.svg.png');
   jsToggle.classList.add("toggleAnim");
   jsToggle.classList.remove("toggleAnimRev");
   defaultToggle.classList.add("toggleAnimRev");
@@ -215,7 +191,6 @@ const enableJsToggle = () => {
 
 };
 const disableJsToggle = () => {
-  jsIcon.setAttribute('src', '');
   jsToggle.classList.add("toggleAnimRev");
   jsToggle.classList.remove("toggleAnim");
   enableDefaultToggle();
@@ -229,11 +204,11 @@ if (
   (defaultToggleStore === "enabled" && !sassToggleOn) ||
   (defaultToggleStore === "enabled" && !jsToggleOn)
 ) {
+  enableDefaultToggle();
   disableHtmlToggle();
   disableCssToggle();
   disableSassToggle();
   disableJsToggle()
-  enableDefaultToggle();
 }
 if (
   (htmlToggleStore === "enabled" && !defaultToggleOn) ||
@@ -241,11 +216,11 @@ if (
   (htmlToggleStore === "enabled" && !sassToggleOn) ||
   (htmlToggleStore === "enabled" && !jsToggleOn)
 ) {
+  enableHtmlToggle();
   disableDefaultToggle();
   disableCssToggle();
   disableSassToggle();
   disableJsToggle();
-  enableHtmlToggle();
 }
 if (
   (cssToggleStore === "enabled" && !defaultToggleOn) ||
@@ -253,11 +228,11 @@ if (
   (cssToggleStore === "enabled" && !sassToggleOn) ||
   (cssToggleStore === "enabled" && !jsToggleOn)
 ) {
+  enableCssToggle();
   disableDefaultToggle();
   disableHtmlToggle();
   disableSassToggle();
   disableJsToggle();
-  enableCssToggle();
 }
 if (
   (sassToggleStore === "enabled" && !defaultToggleOn) ||
@@ -265,11 +240,11 @@ if (
   (sassToggleStore === "enabled" && !cssToggleOn) ||
   (sassToggleStore === "enabled" && !jsToggleOn)
 ) {
+  enableSassToggle();
   disableDefaultToggle();
   disableHtmlToggle();
   disableCssToggle();
   disableJsToggle();
-  enableSassToggle();
 }
 if (
   (jsToggleStore === "enabled" && !defaultToggleOn) ||
@@ -277,11 +252,11 @@ if (
   (jsToggleStore === "enabled" && !cssToggleOn) ||
   (jsToggleStore === "enabled" && !sassToggleOn)
 ) {
+  enableJsToggle();
   disableDefaultToggle();
   disableHtmlToggle();
   disableCssToggle();
   disableSassToggle();
-  enableJsToggle();
 }
 
 function defaultToggleAction() {
