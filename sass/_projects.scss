@@ -1,7 +1,153 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
+#buttonProjects {
+  //background-image: url("img/backgrounds/hand-1500.jpg");
+  .bgFilter {
+    background-color: var(--bgFilterBlk);
+    z-index: 1;
+  }
+}
+#buttonProject {
+  display: none;
+  .projectBox {
+    padding: 0;
+  }
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //background-attachment: fixed;
+}
+#buttonProject.showProject {
+  display: block;
+}
+#btn {
+  display: none;
+}
+#btn.showProject {
+  display: block;
+}
 
+#imgProjects {
+  //background-image: url("img/backgrounds/images-1500.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .bgFilter {
+    background-color: var(--bgFilter);
+  }
+}
+#imgProject{
+  display: none;
+}
+#imgProject.showProject{
+  display: block;
+}
+#imgCarousel{
+  display: none;
+}
+#imgCarousel.showProject {
+  display: block;
+}
+#imgSlider{
+  display: none;
+}
+#imgSlider.showProject{
+  display: block;
+}
+#imgGallery{
+  display: none;
+}
+#imgGallery.showProject{
+  display: block;
+}
+#imgProductGallery{
+  display: none;
+}
+#imgProductGallery.showProject {
+  display: block;
+}
+
+#animationProjects {
+  //background-image: url("img/backgrounds/animation-1500.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .bgFilter {
+    background-color: var(--bgFilter);
+  }
+}
+#animationProject {
+  display: none;
+}
+#animationProject.showProject {
+  display: block;
+}
+#transform{
+  display: none;
+}
+#transform.showProject{
+  display: block;
+}
+
+#localStorageProjects {
+  //background-image: url("img/backgrounds/storage-1500.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .bgFilter {
+    background-color: var(--bgFilter);
+  }
+}
+#storageProject {
+  display: none;
+}
+#storageProject.showProject {
+  display: block;
+}
+#toDoList1{
+  display: none;
+}
+#toDoList1.showProject{
+  display: block;
+}
+
+#webPlayerProjects {
+  //background-image: url("img/valentin-petkov-uKS_wcTAMZU-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .bgFilter {
+    background-color: var(--bgFilter);
+  }
+}
+#webPlayerProject {
+  display: none;
+}
+#webPlayerProject.showProject {
+  display: block;
+}
+
+#uiProjects {
+  //background-image: url("img/backgrounds/storage-1500.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .bgFilter {
+    background-color: var(--bgFilter);
+  }
+}
+#uiProject {
+  display: none;
+}
+#uiProject.showProject {
+  display: block;
+}
 
 @media (min-width: 310px) {
 }

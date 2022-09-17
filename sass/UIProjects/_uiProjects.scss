@@ -2,22 +2,7 @@
 @use "_mixin" as *;
 
 
-#uiProjects {
-  //background-image: url("img/backgrounds/storage-1500.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  .bgFilter {
-    background-color: var(--bgFilter);
-  }
-}
-#uiProject {
-  display: none;
-}
-#uiProject.showProject {
-  display: block;
-}
+
 .tabletBox {
   display: none;
   max-width: 475px;

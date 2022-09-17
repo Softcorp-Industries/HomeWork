@@ -2,15 +2,31 @@
 @use "homeWork";
 @use "banners";
 @use "projects";
-@use "imgProjects";
-@use "animationProjects";
-@use "buttonProjects";
-@use "storageProjects";
-@use "webPlayerProjects";
-@use "uiProjects";
 @use "features";
 @use "codeStyle";
 
+@use "./BtnProjects/darkmodeProject";
+@use "./BtnProjects/toggleProject";
+@use "./BtnProjects/inputBtnProject";
+@use "./BtnProjects/menuProject";
+@use "./BtnProjects/btnProject";
+
+@use "./AnimationProjects/transformProject";
+@use "./AnimationProjects/ninjaHover";
+@use "./AnimationProjects/flipMenuProject";
+@use "./AnimationProjects/canvasProject";
+@use "./AnimationProjects/clockProject";
+
+@use "./ImgProjects/carouselProject";
+@use "./ImgProjects/galleryProject";
+@use "./ImgProjects/productProject";
+@use "./ImgProjects/sliderProject";
+
+@use "./StorageProjects/todo1Project.scss";
+
+@use "./WebPlayerProjects/webPlayerProjects";
+
+@use "./UIProjects/uiProjects"
 
 /*
     ** Break Points **
