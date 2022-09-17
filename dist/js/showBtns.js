@@ -2,11 +2,12 @@
 function enableShowProjectsBtn(e) {
   e.target.parentElement.parentElement.nextElementSibling.classList.add('showProject');
   e.target.innerHTML = 'Hide Projects';
+  e.target.style.outline = "2px solid var(--txtChange)"
 }
 function disableShowProjectsBtn(e) {
   e.target.parentElement.parentElement.nextElementSibling.classList.remove('showProject');
   e.target.innerHTML = 'Show Projects';
-
+  e.target.style.outline = "none"
 }
 //  Projects Button
 const buttonShow = document.getElementById('buttonShow');
@@ -103,13 +104,13 @@ function enableShowProjectBtn(e) {
   //console.log(e.target.parentElement.parentElement.parentElement.nextElementSibling);
   e.target.parentElement.parentElement.parentElement.nextElementSibling.classList.add('showProject');
   e.target.innerHTML = 'Hide Project';
-  //buttonShow.style.backgroundColor = "var(--secondaryClr)";
-  //buttonShow.style.color = "var(--secondaryTxt)";
+  e.target.style.outline = "2px solid var(--txtChange)"
 }
 function disableShowProjectBtn(e) {
   //console.log(e.target);
   e.target.parentElement.parentElement.parentElement.nextElementSibling.classList.remove('showProject');
   e.target.innerHTML = 'Show Project';
+  e.target.style.outline = "none"
   //buttonShow.style.color = "var(--secondaryClr)";
   //buttonShow.style.backgroundColor = "";
 }

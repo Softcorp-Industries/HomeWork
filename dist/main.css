@@ -135,19 +135,6 @@ hr {
   background-color: var(--secondaryClr);
 }
 
-p {
-  font-family: "Bedrock";
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Audiowide", cursive;
-}
-
 footer {
   margin: auto;
   text-align: center;
@@ -680,10 +667,10 @@ footer span {
   margin-bottom: 2em;
 }
 .chapter h2 {
-  text-shadow: 0px 0px 5px var(--black);
+  text-shadow: 0px 0px 5px var(--darkModeBg);
   font-size: 1.75em;
   font-weight: 900;
-  color: var(--secondaryTxt);
+  color: var(--txtChange);
   letter-spacing: 4px;
 }
 .chapter__summary {
@@ -695,9 +682,10 @@ footer span {
   justify-content: space-evenly;
 }
 .chapter__summary p {
+  margin: 1em 0;
   padding: 0.25em;
   line-height: 1.3;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: Var(--darkModeTxtClr);
 }
 .chapter__summary p span {
@@ -720,7 +708,7 @@ footer span {
   margin-top: 1.5em;
   text-align: center;
   letter-spacing: 2px;
-  color: var(--txtChange);
+  color: var(--darkModeTxtClr);
   font-size: 1.5em;
   font-weight: 700;
   margin-bottom: 0.25em;
@@ -3516,36 +3504,27 @@ label:active:after {
   box-shadow: 0px -5px 5px var(--secondaryTxt), 0px 5px 5px var(--secondaryTxt), 5px 0px 5px var(--secondaryTxt);
 }
 
-.showBtn {
-  margin: 15px auto;
-  width: 100%;
-  max-width: 500px;
-  min-height: 1.5em;
-  background: none;
-  border-radius: 1em;
-}
 .showBtn button {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   cursor: pointer;
-  padding: 1em 2em;
+  margin: auto;
+  display: block;
+  width: 50%;
+  max-width: 350px;
+  padding: 0.75em 0;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  font-family: "Audiowide";
   outline: none;
   border: none;
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-family: "Audiowide";
-  font-size: 0.8em;
-  font-weight: 600;
-  color: var(--secondaryClr);
-  text-align: center;
-  text-decoration: none;
-  letter-spacing: 0.25rem;
-  background-color: whitesmoke;
-  border-radius: 1em;
+  border-radius: 0.75em;
+  color: var(--txtChange);
+  background-color: var(--darkModeClrlgt);
 }
+
 .showBtn button:hover {
-  background-color: var(--secondaryClr);
-  color: var(--secondaryTxt);
+  transform: scale(1.05);
+  letter-spacing: 2px;
 }
 
 .readMoreBtn {

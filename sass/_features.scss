@@ -81,36 +81,28 @@
   }
 }
 .showBtn {
-  margin: 15px auto;
-  width: 100%;
-  max-width: 500px;
-  min-height: 1.5em;
-  background: none;
-  border-radius: 1em;
   button {
     @include darkMode;
     cursor: pointer;
-    padding: 1em 2em;
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-width: 350px;
+    padding: 0.75em 0;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    font-family: "Audiowide";
     outline: none;
     border: none;
-    display: block;
-    width: 100%;
-    height: 100%;
-    font-family: "Audiowide";
-    font-size: .8em;
-    font-weight: 600;
-    color: var(--secondaryClr);
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 0.25rem;
-    background-color: whitesmoke;
-    border-radius: 1em;
+    border-radius: 0.75em;
+    color: var(--txtChange);
+    background-color: var(--darkModeClrlgt);
   }
-  button:hover{
-    background-color: var(--secondaryClr);
-    color: var(--secondaryTxt);
-    //box-shadow: none;
-  }
+}
+.showBtn button:hover {
+  transform: scale(1.05);
+  letter-spacing: 2px;
+
 }
 .readMoreBtn {
   margin: auto;

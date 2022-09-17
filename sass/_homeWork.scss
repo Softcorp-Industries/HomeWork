@@ -99,10 +99,10 @@
     margin-bottom: 2em;
   }
   h2 {
-    text-shadow: 0px 0px 5px var(--black);
+    text-shadow: 0px 0px 5px var(--darkModeBg);
     font-size: 1.75em;
     font-weight: 900;
-    color: var(--secondaryTxt);
+    color: var(--txtChange);
     letter-spacing: 4px;
   }
   &__summary {
@@ -111,14 +111,12 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: space-evenly;
-    //text-align: center;
     p {
+      margin: 1em 0;
       padding: 0.25em;
-      //font-size: 0.9em;
       line-height: 1.3;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       color: Var(--darkModeTxtClr);
       span {
         color: red;
@@ -145,7 +143,7 @@
       //text-shadow: 0px 0px 5px var(--darkModeTxtClr);
       //background-color: var(--bgFilterDrk);
       letter-spacing: 2px;
-      color: var(--txtChange);
+      color: var(--darkModeTxtClr);
       font-size: 1.5em;
       //font-family: "Audiowide";
       font-weight: 700;
@@ -167,7 +165,6 @@
     &__body {
       width: 100%;
       margin: auto;
-      
       padding-top: 15px;
       //background-color: var(--bgFilter);
       margin-bottom: 3em;
@@ -175,9 +172,8 @@
         width: 100%;
         max-width: 700px;
         margin: auto;
+        
         text-align: left;
-        //border: 1px solid var(--black);
-        //padding: 0.25rem;
         font-size: .95em;
         letter-spacing: 1px;
         color: var(--darkModeTxtClr);

@@ -372,8 +372,12 @@ cssToggleAction();
 sassToggleAction();
 jsToggleAction();
 
-
-
+let trans = () => {
+  document.body.classList.add("transition");
+  window.setTimeout(() => {
+    document.body.classList.remove("transition");
+  }, 1000);
+};
 
 
 /*
