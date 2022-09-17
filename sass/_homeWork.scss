@@ -245,26 +245,45 @@
       }
     }
   }
-  .links {
+  .contributorLinks {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     background-color: var(--darkModeTxtlgt);
-    padding: 0.25em;
     border-top: 3px solid var(--toggleTheme);
     border-radius: 0 0 .5em .5em;
-    a {
-      text-decoration: none;
+    .contributorLink {
+      display: flex;
+      flex-direction: column;
+      align-items: top;
+      justify-content: space-between;
+      p {
+        line-height: 1.3;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+      a {
+        display: block;
+      }
     }
-    h5 {
-      line-height: 1.5;
-      font-size: 12px;
-      letter-spacing: 1px;
-      span {
-        color: orangered;
-        text-shadow: none;
+    .youtubeLink {
+      margin-top: 9px;
+      a {
+      img {
+        width: 65px;
+      }
+    }
+    }
+    .internetLink {
+      p {
+        margin-bottom: 6px;
+      }
+      a {
+        img {
+          width: 50px;
+        }
       }
     }
   }

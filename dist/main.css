@@ -811,28 +811,41 @@ footer span {
   height: 100%;
   border-radius: 0.5rem;
 }
-.project .links {
+.project .contributorLinks {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   background-color: var(--darkModeTxtlgt);
-  padding: 0.25em;
   border-top: 3px solid var(--toggleTheme);
   border-radius: 0 0 0.5em 0.5em;
 }
-.project .links a {
-  text-decoration: none;
+.project .contributorLinks .contributorLink {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: space-between;
 }
-.project .links h5 {
-  line-height: 1.5;
+.project .contributorLinks .contributorLink p {
+  line-height: 1.3;
   font-size: 12px;
   letter-spacing: 1px;
 }
-.project .links h5 span {
-  color: orangered;
-  text-shadow: none;
+.project .contributorLinks .contributorLink a {
+  display: block;
+}
+.project .contributorLinks .youtubeLink {
+  margin-top: 9px;
+}
+.project .contributorLinks .youtubeLink a img {
+  width: 65px;
+}
+.project .contributorLinks .internetLink p {
+  margin-bottom: 6px;
+}
+.project .contributorLinks .internetLink a img {
+  width: 50px;
 }
 
 @media (min-width: 400px) {
@@ -2406,18 +2419,107 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   letter-spacing: 2px;
 }
 
+.toggle.toggleAnim {
+  -webkit-animation: tglAnimFwd 400ms linear both;
+          animation: tglAnimFwd 400ms linear both;
+}
+
+.toggle.toggleAnimRev {
+  -webkit-animation: tglAnimRev 400ms linear both;
+          animation: tglAnimRev 400ms linear both;
+}
+
+@-webkit-keyframes tglAnimFwd {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(55px);
+  }
+}
+
+@keyframes tglAnimFwd {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(55px);
+  }
+}
+@-webkit-keyframes tglAnimRev {
+  0% {
+    transform: translateX(55px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes tglAnimRev {
+  0% {
+    transform: translateX(55px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 @media screen and (min-width: 481px) {
   #buttonProject .projectBox {
-    padding: 1em;
+    padding: 0.5em;
   }
+}
+@media (min-width: 750px) {
   .toggleButton .toggleBtns {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
-  .toggle-container {
+  .toggleButton .toggle-container {
     width: 150px;
   }
-  .toggle-container .btn-container {
+  .toggleButton .toggle-container .btn-container {
     width: 150px;
+    height: 70px;
+  }
+  .toggleButton .toggle-container .btn-container .toggle {
+    margin-left: 5px;
+    width: 60px;
+    height: 60px;
+  }
+  #htmlIcon, #cssIcon, #sassIcon, #jsIcon {
+    width: 44px;
+  }
+  #defaultIcon {
+    width: 50px;
+  }
+  @-webkit-keyframes tglAnimFwd {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(78px);
+    }
+  }
+  @keyframes tglAnimFwd {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(78px);
+    }
+  }
+  @-webkit-keyframes tglAnimRev {
+    0% {
+      transform: translateX(78px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes tglAnimRev {
+    0% {
+      transform: translateX(78px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
   }
 }
 #toggleInputs {
@@ -2511,49 +2613,6 @@ label:active:after {
   border-radius: 50%;
 }
 
-.toggle.toggleAnim {
-  -webkit-animation: tglAnimFwd 400ms linear both;
-          animation: tglAnimFwd 400ms linear both;
-}
-
-.toggle.toggleAnimRev {
-  -webkit-animation: tglAnimRev 400ms linear both;
-          animation: tglAnimRev 400ms linear both;
-}
-
-@-webkit-keyframes tglAnimFwd {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(55px);
-  }
-}
-
-@keyframes tglAnimFwd {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(55px);
-  }
-}
-@-webkit-keyframes tglAnimRev {
-  0% {
-    transform: translateX(55px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-@keyframes tglAnimRev {
-  0% {
-    transform: translateX(55px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
 #burgerSection {
   display: none;
 }
