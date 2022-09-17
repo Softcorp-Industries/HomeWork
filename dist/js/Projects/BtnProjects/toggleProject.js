@@ -372,19 +372,16 @@ cssToggleAction();
 sassToggleAction();
 jsToggleAction();
 
-let darkModeStore = localStorage.getItem('darkModeStore');
 
-let darkModeToggleOn = false;
-var checkbox = document.querySelector('input[name=darkModeTheme]');
-const enableDarkModeToggle = () => {
-  document.body.setAttribute('data-toggleTheme', 'dark');
-darkModeStore = localStorage.setItem('darkModeStore', 'enabled')
-}
-const disableDarkModeToggle = () => {
-  document.body.setAttribute('data-toggleTheme', 'light');
-darkModeStore = localStorage.setItem('darkModeStore', 'disabled')
-}
 
+
+
+/*
+
+const defaultToggleBtn = document.getElementById("defaultToggleBtn");
+const defaultToggleHeader = document.querySelector(".defaultToggleHeader");
+let defaultToggle = document.querySelector(".defaultToggleBtn");
+let defaultToggleOn = false;
 if(
   (darkModeStore === "enabled") 
 ) {
@@ -416,18 +413,6 @@ let trans = () => {
     document.body.classList.remove("transition");
   }, 1000);
 };
-
-
-
-
-
-/*
-
-const defaultToggleBtn = document.getElementById("defaultToggleBtn");
-const defaultToggleHeader = document.querySelector(".defaultToggleHeader");
-let defaultToggle = document.querySelector(".defaultToggleBtn");
-let defaultToggleOn = false;
-
 defaultToggleBtn.addEventListener("click", () => {
   if (!defaultToggleOn) {
     defaultToggle.classList.add("toggleAnim");

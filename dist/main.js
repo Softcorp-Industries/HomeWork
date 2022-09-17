@@ -1,16 +1,10 @@
-import * as DarkMode from './js/darkMode.js';
-import * as NavBar from './js/nav.js';
-import * as Greeting from './js/greeting.js';
+import * as Global from './js/Global/global.js';
 import * as Observers from './js/observers.js';
-import * as Top from './js/top.js';
 import * as Lazysizes from './js/lazysizes.min.js';
 import * as Bgset from './js/ls.bgset.min.js';
+import * as ButtonProjects from './js/Projects/BtnProjects/btnProjects.js';
+import * as ImgProjects from './js/Projects/ImgProjects/imgProjects.js';
+import * as StorageProjects from './js/Projects/StorageProjects/todo1Project.js';
+import * as WebPlayerProjects from './js/Projects/WebPlayerProjects/audioPlayerProject.js';
 import * as ShowBtns from './js/showBtns.js';
 import * as ReadMoreBtn from './js/readMoreBtn.js';
-
-
-// Project Files
-import * as ToDo1 from './js/projects/todo1.js'
-import * as AudioPlayer from './js/projects/audioPlayer.js'
-import * as Buttons from './js/projects/buttons.js'
-import * as ImgProjects from './js/projects/imgProjects.js'
