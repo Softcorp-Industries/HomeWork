@@ -4,8 +4,8 @@
 #main-header {
   .pageTitle {
     letter-spacing: 3px;
-    padding: .5em;
-    padding-bottom: .25em;
+    padding: 0.5em;
+    padding-bottom: 0.25em;
     font-size: 2em;
     font-weight: 700;
     font-family: "The Nautigal";
@@ -13,13 +13,13 @@
     color: var(--txtChange);
   }
   h1 {
-  letter-spacing: 2px;
-  text-align: center;
-  color: var(--txtChange);
-  font-family: "Audiowide";
-  font-size: 1.5em;
-  padding-bottom: .5em
-}
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--txtChange);
+    font-family: "Audiowide";
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+  }
 }
 .landingImg {
   display: block;
@@ -31,7 +31,7 @@
 .greeting {
   width: 100%;
   text-align: center;
-  font-size: .9em;
+  font-size: 0.9em;
   font-family: "Audiowide";
   color: var(--txtChange);
   text-shadow: 0px 0px 3px var(--darkModeBg);
@@ -66,7 +66,7 @@
     margin: 1em auto;
     width: 95%;
     max-width: 900px;
-    font-size: .9em;
+    font-size: 0.9em;
     span {
       text-shadow: 0px 0px 3px var(--darkModeBg);
       font-weight: 400;
@@ -150,7 +150,7 @@
     .project-credit {
       margin-top: 1em;
       text-align: center;
-      font-size: .75em;
+      font-size: 0.75em;
       margin-bottom: 2em;
       color: Var(--darkModeTxtClr);
       span {
@@ -170,9 +170,9 @@
         width: 100%;
         max-width: 700px;
         margin: auto;
-        
+
         text-align: left;
-        font-size: .95em;
+        font-size: 0.95em;
         letter-spacing: 1px;
         color: var(--darkModeTxtClr);
         background-color: var(--bgFilterTheme);
@@ -182,7 +182,7 @@
           font-weight: 600;
           font-family: "Audiowide";
           font-size: 1.25em;
-          margin-bottom: .25em;
+          margin-bottom: 0.25em;
         }
         span {
           font-weight: 900;
@@ -195,7 +195,7 @@
     // Wrapper contains the Project box
     margin: auto;
     border: 3px solid var(--toggleTheme);
-    border-radius: .5em;
+    border-radius: 0.5em;
     max-width: 800px;
     background-color: var(--darkModeTxtlgt);
   }
@@ -206,7 +206,7 @@
     padding: 0.5em;
     background-color: var(--darkModeTxtlgt);
     border-bottom: 3px solid var(--toggleTheme);
-    border-radius: .5em .5em 0 0;
+    border-radius: 0.5em 0.5em 0 0;
     &__box {
       margin: auto;
       display: flex;
@@ -247,7 +247,7 @@
     width: 100%;
     background-color: var(--darkModeTxtlgt);
     border-top: 3px solid var(--toggleTheme);
-    border-radius: 0 0 .5em .5em;
+    border-radius: 0 0 0.5em 0.5em;
     .contributorLink {
       display: flex;
       flex-direction: column;
@@ -265,18 +265,19 @@
     .youtubeLink {
       margin-top: 9px;
       a {
-      img {
-        width: 65px;
+        img {
+          width: 45px;
+        }
       }
     }
-    }
     .internetLink {
+      padding-top: 5px;
       p {
-        margin-bottom: 6px;
+        margin-bottom: 3px;
       }
       a {
         img {
-          width: 50px;
+          width: 35px;
         }
       }
     }
@@ -316,6 +317,22 @@
         width: 3em;
       }
     }
+    .contributorLinks {
+      .youtubeLink {
+        a {
+          img {
+            width: 65px;
+          }
+        }
+      }
+      .internetLink {
+        a {
+          img {
+            width: 50px;
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width: 800px) {
@@ -345,7 +362,7 @@
 }
 @media (min-width: 1024px) {
   .greeting {
-    padding-bottom: .5em;
+    padding-bottom: 0.5em;
     font-size: 1.2em;
   }
   .landingImg {
