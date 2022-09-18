@@ -1,7 +1,26 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-
+#main-header {
+  .pageTitle {
+    letter-spacing: 3px;
+    padding: .5em;
+    padding-bottom: .25em;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "The Nautigal";
+    text-align: center;
+    color: var(--txtChange);
+  }
+  h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--txtChange);
+  font-family: "Audiowide";
+  font-size: 1.5em;
+  padding-bottom: .5em
+}
+}
 .landingImg {
   display: block;
   margin: 1.5em auto;
@@ -57,18 +76,17 @@
 // Chapter contains all related projects
 .chapter {
   padding-top: 2em;
-  //padding-bottom: 20px;
   min-height: 350px;
   border-top: 3px solid var(--themeBdr);
   // Chapter Header is visable at all times
   &__header {
     @include darkMode;
-    text-align: center;
     margin: auto;
     margin-top: 2em;
     padding: 1em 0;
     width: 95%;
     max-width: 600px;
+    text-align: center;
     border-radius: 1rem;
     background-image: linear-gradient(
       to left top,
@@ -78,13 +96,13 @@
     background-size: cover;
     background-color: var(--themeBlk);
     margin-bottom: 2em;
-  }
-  h2 {
-    text-shadow: 0px 0px 5px var(--darkModeBg);
-    font-size: 1.75em;
-    font-weight: 900;
-    color: var(--txtChange);
-    letter-spacing: 4px;
+    h2 {
+      text-shadow: 0px 0px 5px var(--darkModeBg);
+      font-size: 1.75em;
+      font-weight: 900;
+      color: var(--txtChange);
+      letter-spacing: 4px;
+    }
   }
   &__summary {
     width: 800px;
@@ -113,7 +131,6 @@
   padding: 1em;
   text-align: center;
 }
-
 .project {
   width: 100%;
   margin-bottom: 7em;

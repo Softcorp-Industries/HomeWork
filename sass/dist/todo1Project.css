@@ -1,0 +1,363 @@
+:root {
+  --primaryBg: #e3e3e3;
+  --secondaryClr: purple;
+  --secondaryTxt: #C0FFF4;
+  --txtChange: purple;
+  --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
+  --jsThemeClr: yellow;
+  --htmlThemeClr: orangered;
+  --cssThemeClr: blue;
+  --sassThemeClr: pink;
+  --themeTxtClr: rgb(255, 255, 0);
+  --defaultThemeClr: rgb(54, 54, 54);
+  --themeBg: rgb(255, 255, 0);
+  --themeSec: black;
+  --themeBlk: whitesmoke;
+  --themeWht: black;
+  --darkModeBg: #e3e3e3;
+  --darkModeTxtClr: rgb(25, 25, 25);
+  --darkModeTxtlgt: rgba(255, 255, 255, 0.6);
+  --bgFilter: rgba(255, 255, 255, 0.2);
+  --bgFilterBlk: rgba(0, 0, 0);
+  --bgFilterBlkDrk: rgba(0, 0, 0, 0.8);
+  --bgFilterDrk: rgba(255, 255, 255, 0.8);
+  --black: black;
+  --white: white;
+  --toggleTheme: #bebebeb;
+  --inputToggleThemeFilter: rgba(255, 255, 255, 0.2);
+  --inputToggleTheme: rgba(255, 255, 255, 0.6);
+  --inputToggleTxt: rgb(54, 54, 54);
+  --xsmSpacer: 0.25em;
+  --smSpacer: .5em;
+  --mdSpacer: 1em;
+  --lgSpacer: 1.5em;
+  --xlgSpacer: 2em;
+  --xxlgSpacer: 3em;
+}
+
+body.transition,
+body.transition *,
+body.transition *:before,
+body.transition *:after {
+  transition: all 750ms;
+}
+
+.darkModeFilter {
+  background-color: var(--bgFilterBlk);
+}
+
+body[data-darkMode=darkMode] {
+  --darkModeBg: rgb(0, 0, 0);
+  --darkModeBtn: rgba(189, 189, 189, 0.4);
+  --darkModeBgblk: rgb(0, 0, 0);
+  --darkModeTxtClr: white;
+  --darkModeTxtlgt: rgba(255, 255, 255, 0.6);
+  --themeTxtClr: white;
+  --themeBlk: rgb(99, 99, 99);
+  --themeBg: black;
+  --themeSec: yellow;
+  --txtChange: #C0FFF4;
+}
+
+body[data-toggleTheme=dark] {
+  --inputToggleTheme: rgb(150, 150, 150);
+  --inputToggleThemeFilter: var(--bgFilterBlkDrk);
+  --inputToggleTxt: var(--white);
+}
+
+body {
+  background-image: url("./img/backgrounds/clouds_72634.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*
+body[data-theme="default"] {
+  --themeTxtClr: rgb(54, 54, 54);
+  --themeBdr: rgb(0, 0, 0);
+  --themeBgOp: rgba(255, 255, 255, 0.6);
+  --black: white;
+}
+
+
+body[data-theme="red"] {
+  --themeTxtClr: rgb(255, 69, 0);
+  --themeBdr: rgb(255, 69, 0);
+  --themeBgOp: rgba(255, 69, 0, 0.6);
+}
+body[data-theme="blue"] {
+  --themeTxtClr: rgb(22, 83, 252);
+  --themeBdr: rgb(22, 83, 252);
+  --themeBgOp: rgba(22, 83, 252, 0.6);
+}
+body[data-theme="pink"] {
+  --themeTxtClr: rgb(255, 192, 203);
+  --themeBdr: rgb(255, 192, 203);
+  --themeBgOp: rgba(255, 192, 203, 0.6);
+}
+body[data-theme="yellow"] {
+  --themeTxtClr: rgb(255, 255, 0);
+  --themeBdr: rgb(255, 255, 0);
+  --themeBgOp: rgba(255, 255, 0, 0.6);
+}
+*/
+body[data-toggleMode=default] {
+  --toggleTheme: #bebebe;
+}
+
+body[data-toggleMode=htmlTheme] {
+  --toggleTheme: rgb(255, 69, 0);
+}
+
+body[data-toggleMode=cssTheme] {
+  --toggleTheme: rgb(22, 83, 252);
+}
+
+body[data-toggleMode=sassTheme] {
+  --toggleTheme: rgb(255, 192, 203);
+}
+
+body[data-toggleMode=jsTheme] {
+  --toggleTheme: rgb(255, 255, 0);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+hr {
+  height: 8px;
+  background-color: var(--secondaryClr);
+}
+
+footer {
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+}
+footer p {
+  color: var(--black);
+  line-height: 1.4;
+  letter-spacing: 1px;
+  font-size: 0.75em;
+  font-family: "Audiowide";
+}
+
+footer span {
+  color: red;
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 550px) {
+  body {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 28px;
+  }
+}
+.todo1__wrapper1__container1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: var(--darkModeTxtClr);
+  padding-bottom: 75px;
+}
+.todo1__wrapper1__container1 .title {
+  margin: 10px auto;
+  padding: 0.25rem;
+  text-align: center;
+  font-size: calc(1vw + 1rem);
+  font-weight: 900;
+  color: var(--darkModeTxtClr);
+  background-color: var(--darkModeBg);
+  border-radius: 0.75rem;
+  letter-spacing: 2px;
+}
+.todo1__wrapper1__container1 .all-tasks {
+  grid-area: lists;
+}
+.todo1__wrapper1__container1 .task-list {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+.todo1__wrapper1__container1 .list-name {
+  cursor: pointer;
+}
+.todo1__wrapper1__container1 .list-name:hover {
+  opacity: 0.7;
+}
+.todo1__wrapper1__container1 form {
+  display: flex;
+}
+.todo1__wrapper1__container1 .btn {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+.todo1__wrapper1__container1 .btn.create {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 0.25em;
+  transition: opacity 250ms ease-in;
+}
+.todo1__wrapper1__container1 .btn.create:hover {
+  opacity: 0.7;
+}
+.todo1__wrapper1__container1 .btn.delete {
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: color 200ms;
+}
+.todo1__wrapper1__container1 .btn.delete:hover {
+  color: var(--clr-warning);
+}
+.todo1__wrapper1__container1 .new {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+  padding: 0.25em;
+  transition: border-bottom 150ms ease-in;
+  order: 2;
+}
+.todo1__wrapper1__container1 .new::-moz-placeholder {
+  opacity: 0.35;
+}
+.todo1__wrapper1__container1 .new:-ms-input-placeholder {
+  opacity: 0.35;
+}
+.todo1__wrapper1__container1 .new::placeholder {
+  opacity: 0.35;
+}
+.todo1__wrapper1__container1 .new:focus {
+  border-bottom-width: 3px;
+}
+.todo1__wrapper1__container1 .new:focus::-moz-placeholder {
+  opacity: 0.15;
+}
+.todo1__wrapper1__container1 .new:focus:-ms-input-placeholder {
+  opacity: 0.15;
+}
+.todo1__wrapper1__container1 .new:focus::placeholder {
+  opacity: 0.15;
+}
+.todo1__wrapper1__container1 .new.list {
+  font-size: 1.2rem;
+}
+.todo1__wrapper1__container1 .new.task {
+  margin-bottom: 0;
+}
+.todo1__wrapper1__container1 .active-list {
+  font-weight: 700;
+}
+.todo1__wrapper1__container1 .todo-list {
+  grid-area: active;
+  background: var(--darkModeClrlgtOp);
+  color: var(--darkModeTxtClr);
+}
+.todo1__wrapper1__container1 .todo-header {
+  padding: var(--spacer);
+  background: #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo1__wrapper1__container1 .list-title {
+  margin: 0 1em 0 0;
+}
+.todo1__wrapper1__container1 .task-count {
+  margin: 0;
+}
+.todo1__wrapper1__container1 .todo-body {
+  padding: var(--spacer);
+  position: relative;
+}
+.todo1__wrapper1__container1 .new-task-creator .create {
+  color: var(--darkModeTxtClr);
+}
+.todo1__wrapper1__container1 [type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
+.todo1__wrapper1__container1 .task label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.todo1__wrapper1__container1 .task {
+  position: relative;
+  margin-bottom: 1.25em;
+}
+.todo1__wrapper1__container1 .task::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -0.5em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.1;
+}
+.todo1__wrapper1__container1 .custom-checkbox {
+  display: inline-block;
+  width: var(--spacer1);
+  height: var(--spacer1);
+  margin-right: var(--spacer1);
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+}
+.todo1__wrapper1__container1 .task:hover .custom-checkbox,
+.todo1__wrapper1__container1 [type=checkbox]:focus + label .custom-checkbox {
+  transform: scale(1.2);
+  color: var(--darkModeTxtClr);
+}
+.todo1__wrapper1__container1 [type=checkbox]:checked + label .custom-checkbox {
+  background: var(--darkModeTxtClr);
+  border-color: var(--darkModeTxtClr);
+  box-shadow: inset 0 0 0px 2px var(--darkModeTxtClr);
+}
+.todo1__wrapper1__container1 .task label:after {
+  content: "";
+  position: absolute;
+  left: 1.5em;
+  right: 0;
+  top: 50%;
+  height: 3px;
+  background: currentColor;
+  transform: scale(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in-out;
+}
+.todo1__wrapper1__container1 [type=checkbox]:checked + label:after {
+  transform: scale(1);
+  transform-origin: left;
+}
+.todo1__wrapper1__container1 .delete-stuff {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -35px;
+  color: var(--darkModeTxtClr);
+}
