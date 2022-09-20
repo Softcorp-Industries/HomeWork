@@ -682,7 +682,7 @@ footer span {
   justify-content: space-evenly;
 }
 .chapter__summary p {
-  margin: 1em 0;
+  margin: 0.5em 0;
   padding: 0.25em;
   line-height: 1.3;
   letter-spacing: 1px;
